@@ -1,0 +1,20 @@
+
+/* reset */
+@import url(reset.css);
+
+
+/* carrega variaveis */
+@import url(var.css);
+
+/* carrega estruturas base */
+@import url(estruturas-base/footer.css);
+@import url(estruturas-base/header.css);
+@import url(estruturas-base/main.css);
+@import url(estruturas-base/nav.css);
+@import url(estruturas-base/section.css);
+
+/* Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css");
+
+/* Carrega componentes */
+@import url(componentes/botao-base.css);
