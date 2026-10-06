@@ -54,6 +54,7 @@ nome_paciente: string
 numero_paciente: string
 numero_convenio: string
 
+
 ```
 GP_5_TungTung-Saude
 ├─ backend
@@ -69,6 +70,9 @@ GP_5_TungTung-Saude
 │  │  │  │  ├─ nav.css
 │  │  │  │  └─ section.css
 │  │  │  ├─ paginas
+│  │  │  │  ├─ consulta.css
+│  │  │  │  ├─ historico.css
+│  │  │  │  ├─ internacao.css
 │  │  │  │  ├─ paciente.css
 │  │  │  │  ├─ profissional.css
 │  │  │  │  └─ quarto.css
@@ -77,8 +81,29 @@ GP_5_TungTung-Saude
 │  │  │  └─ var.css
 │  │  ├─ img
 │  │  └─ js
+│  │     ├─ componentes
+│  │     │  ├─ botao-base.js
+│  │     │  └─ header-base.js
+│  │     ├─ dados.js
+│  │     ├─ estruturas-base
+│  │     │  ├─ footer.js
+│  │     │  ├─ header.js
+│  │     │  ├─ main.js
+│  │     │  └─ nav.js
+│  │     ├─ paginas
+│  │     │  ├─ historico.js
+│  │     │  ├─ internacao.js
+│  │     │  ├─ paciente.js
+│  │     │  ├─ profissional.js
+│  │     │  └─ quarto.js
+│  │     └─ script.js
 │  ├─ index.html
 │  └─ pages
+│     ├─ historico.html
+│     ├─ internacao.html
+│     ├─ paciente.html
+│     ├─ profissional.html
+│     └─ quarto.html
 └─ README.md
 
 ```
