@@ -10,7 +10,7 @@
     padding-right:0.5rem ;
     transform-origin: bottom left;
     transition: transform 0.3s ease , background-color 0.5s ease;
-
+    width: fit-content;
 }
 .tts-button--basic:hover{
     cursor: pointer;
