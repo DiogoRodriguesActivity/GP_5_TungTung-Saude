@@ -1,0 +1,30 @@
+
+.tts-footer{
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--color-primary-light);
+    padding: 1rem;
+}
+.tts-footer__conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.tts-footer_links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.tts-footer__subtitulo{
+    color: var(--color-primary);
+}
+.tts-footer__texto{
+    font-size: 1rem;
+}

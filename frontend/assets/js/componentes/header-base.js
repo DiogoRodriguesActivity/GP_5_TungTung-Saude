@@ -29,7 +29,7 @@ function criarNavLinks(){
             console.warn(`O link "${linkNomes[i]}" Está sem direcionamento`)
     }
     const navLink = document.createElement('a');
-    navLink.className = 'tts-nav__link';
+    navLink.className = 'tts-button--basic';
     navLink.textContent = linkNomes[i];
     navLink.href = href[i];
     nav.appendChild(navLink);

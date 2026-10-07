@@ -12,6 +12,7 @@
 @import url(estruturas-base/main.css);
 @import url(estruturas-base/nav.css);
 @import url(estruturas-base/section.css);
+@import url(estruturas-base/body.css);
 
 /* Bootstrap */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css");
