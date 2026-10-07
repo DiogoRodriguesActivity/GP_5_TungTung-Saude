@@ -1,0 +1,17 @@
+{
+    "pacientes": [
+
+        {   "nome":"Julio Cesar",
+            "imagem":"https://randomuser.me/api/portraits/men/1.jpg",
+            "info":"18 anos, gênero masculino"
+        },
+        {
+            "nome":"Carla Viana",
+            "imagem":"https://randomuser.me/api/portraits/women/1.jpg",
+            "info":"21 anos, gênero feminino"
+
+        }
+    ],
+    "profissionais":[],
+    "quartos":[]
+}
