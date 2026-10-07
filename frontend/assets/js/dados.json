@@ -1,11 +1,14 @@
 {
     "pacientes": [
 
-        {   "nome":"Julio Cesar",
+        {   
+            "id":"IWK3MFG",
+            "nome":"Julio Cesar",
             "imagem":"https://randomuser.me/api/portraits/men/1.jpg",
             "info":"18 anos, gênero masculino"
         },
         {
+            "id":"P1L4KGN",
             "nome":"Carla Viana",
             "imagem":"https://randomuser.me/api/portraits/women/1.jpg",
             "info":"21 anos, gênero feminino"
@@ -13,11 +16,13 @@
         }
     ],
     "profissionais":[
-        {"nome":"Augusto Silva Santos",
+        {
+            "id":"OI2034R",
+            "nome":"Augusto Silva Santos",
         "imagem":"https://randomuser.me/api/portraits/men/34.jpg",
         "info":"34 anos, otorrinolaringologista"
         },
-        {
+        {   "id":"OI3023K",
             "nome":"Josiane Ferreira Cardoso",
             "imagem":"https://randomuser.me/api/portraits/women/67.jpg",
             "info":"27 anos, neurologista"
@@ -26,14 +31,33 @@
     ],
     "quartos":[
         {
+            "id":"JAKAOQR",
             "nome":"Quarto 212",
             "imagem":"https://hospitaliamada.com.br/system/uploads/2025/03/acomodacoes/imagens/left-image-suites-e-apartamentos-especiais76141741805741.webp",
             "info":"Quarto disponível, lotação 5 pessoas, máximo 10 pessoas"
         },
         {
+            "id":"IJGIPAT",
             "nome":"Quarto 101",
             "imagem":"https://itapira.sp.gov.br/fotos/170872016665d90026c1853703920432.jpg",
             "info":"Quarto indisponível, lotação 10 pessoas, máximo 10 pessoas"
         }
+    ],
+    "consultas":[
+        {
+        "id":"O1P4KSDL",
+        "pacienteId":"IWK3MFG",
+        "profissionalId":"OI2034R",
+        "data":"11/09/2026",
+        "motivo":"Surdez momentânea",
+        "observacaoMedica":"Situação grave, necessário a amputação do membro"
+    },
+    {
+        "id":"Q01OEJKS",
+        "pacienteId":"P1L4KGN",
+        "profissionalId":"OI3023K",
+        "motivo":"Dor de cabeça",
+        "observacaoMedica":"Situação leve, apenas necessário medicamento para dores de cabeça"
+    }
     ]
 }
