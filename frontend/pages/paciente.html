@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Pacientes | TungTung Saúde</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/pages/paciente.css">
-    <script type="module" defer src="../assets/js/script.js"></script>
-    <script type="module" defer src="../assets/js/pages/paciente.js"></script>
 </head>
-<body>
-    <div data-componente="header-base"></div>
-    <main>
-
-        <div data-type="card"></div>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteúdo</a>
+    <header class="app-topbar">
+        <a class="app-brand" href="../index.html"><span class="app-brand__mark" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M19 7h10v12h12v10H29v12H19V29H7V19h12z" /></svg></span><span><strong>TungTung Saúde</strong><small>Gestão hospitalar</small></span></a>
+        <nav class="app-nav" aria-label="Navegação principal">
+            <a href="paciente.html" aria-current="page">Pacientes</a><a href="profissional.html">Profissionais</a><a href="consulta.html">Consultas</a><a href="internacao.html">Internações</a><a href="quarto.html">Quartos</a><a href="historico.html">Histórico</a>
+        </nav>
+        <a class="app-home-link" href="../index.html">Visão geral <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃO HOSPITALAR</p><h1>Pacientes</h1><p class="app-heading__description">Dados cadastrais e de contato dos pacientes.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Novo paciente</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">ⓘ</span><span>Consulte os dados cadastrais e de contato dos pacientes.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="patient-list-title">
+                <div class="app-toolbar"><div><h2 id="patient-list-title">Pacientes cadastrados</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Buscar paciente</span><input type="search" aria-label="Busca de pacientes"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">⌕</span><strong>Nenhum paciente cadastrado</strong><p>Os pacientes cadastrados serão listados nesta área.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="patient-form-title">
+                <div class="app-toolbar"><div><h2 id="patient-form-title">Cadastro de paciente</h2><p class="app-record-count">Campos previstos no escopo do sistema</p></div></div>
+                <form class="app-form app-form--plain" aria-label="Formulário de paciente">
+                    <div class="app-form__fields">
+                        <div class="app-field app-field--wide"><label for="patient-name">Nome completo <span aria-hidden="true">*</span></label><input id="patient-name" name="name" required></div>
+                        <div class="app-field"><label for="patient-cpf">CPF <span aria-hidden="true">*</span></label><input id="patient-cpf" name="cpf" placeholder="000.000.000-00" required></div>
+                        <div class="app-field"><label for="patient-birth">Data de nascimento <span aria-hidden="true">*</span></label><input id="patient-birth" name="birthDate" type="date" required></div>
+                        <div class="app-field"><label for="patient-phone">Telefone <span aria-hidden="true">*</span></label><input id="patient-phone" name="phone" type="tel" required></div>
+                        <div class="app-field"><label for="patient-email">E-mail <span aria-hidden="true">*</span></label><input id="patient-email" name="email" type="email" required></div>
+                        <div class="app-field app-field--wide"><label for="patient-address">Endereço <span aria-hidden="true">*</span></label><textarea id="patient-address" name="address" rows="2" required></textarea></div>
+                        <div class="app-field app-field--wide"><label for="patient-companion">Acompanhante</label><input id="patient-companion" name="companion"></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatórios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar paciente</button></div>
+                </form>
+            </section>
+        </div>
     </main>
-    <div data-componente="footer-base"></div>
-
-    
+    <footer class="app-footer"><a href="../index.html">TungTung Saúde</a></footer>
 </body>
 </html>

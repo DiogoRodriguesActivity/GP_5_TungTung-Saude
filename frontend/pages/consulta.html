@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Consultas | TungTung Saúde</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/pages/consulta.css">
-    <script type="module" defer src="../assets/js/script.js"></script>
-    <script type="module" defer src="../assets/js/pages/consulta.js"></script>
 </head>
-<body>
-<div data-componente="header-base"></div>
-
-</footer>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteúdo</a>
+    <header class="app-topbar">
+        <a class="app-brand" href="../index.html"><span class="app-brand__mark" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M19 7h10v12h12v10H29v12H19V29H7V19h12z" /></svg></span><span><strong>TungTung Saúde</strong><small>Gestão hospitalar</small></span></a>
+        <nav class="app-nav" aria-label="Navegação principal">
+            <a href="paciente.html">Pacientes</a><a href="profissional.html">Profissionais</a><a href="consulta.html" aria-current="page">Consultas</a><a href="internacao.html">Internações</a><a href="quarto.html">Quartos</a><a href="historico.html">Histórico</a>
+        </nav>
+        <a class="app-home-link" href="../index.html">Visão geral <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃO HOSPITALAR</p><h1>Consultas</h1><p class="app-heading__description">Agendamentos vinculados a pacientes e profissionais responsáveis.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Nova consulta</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">ⓘ</span><span>Organize os agendamentos e atendimentos da equipe de saúde.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="consultation-list-title">
+                <div class="app-toolbar"><div><h2>Consultas cadastradas</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Buscar consulta</span><input type="search" aria-label="Busca de consultas"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">⌕</span><strong>Nenhuma consulta cadastrada</strong><p>As consultas cadastradas serão listadas nesta área.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="consultation-form-title">
+                <div class="app-toolbar"><div><h2 id="consultation-form-title">Agendar consulta</h2><p class="app-record-count">Selecione paciente, profissional e horário</p></div></div>
+                <form class="app-form app-form--plain" aria-label="Formulário de consulta">
+                    <div class="app-form__fields">
+                        <div class="app-field"><label for="consultation-patient">Paciente <span aria-hidden="true">*</span></label><select id="consultation-patient" name="patient" required><option value="" selected>Selecione um paciente</option></select></div>
+                        <div class="app-field"><label for="consultation-professional">Profissional responsável <span aria-hidden="true">*</span></label><select id="consultation-professional" name="professional" required><option value="" selected>Selecione um profissional</option></select></div>
+                        <div class="app-field"><label for="consultation-date">Data <span aria-hidden="true">*</span></label><input id="consultation-date" name="date" type="date" required></div>
+                        <div class="app-field"><label for="consultation-time">Horário <span aria-hidden="true">*</span></label><input id="consultation-time" name="time" type="time" required></div>
+                        <div class="app-field app-field--wide"><label for="consultation-reason">Motivo da consulta <span aria-hidden="true">*</span></label><textarea id="consultation-reason" name="reason" rows="2" required></textarea></div>
+                        <div class="app-field app-field--wide"><label for="consultation-notes">Observações médicas</label><textarea id="consultation-notes" name="notes" rows="2"></textarea></div>
+                        <div class="app-field"><label for="consultation-status">Situação</label><select id="consultation-status" name="status"><option>Agendada</option><option>Realizada</option><option>Cancelada</option></select></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatórios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar consulta</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="app-footer"><a href="../index.html">TungTung Saúde</a></footer>
 </body>
 </html>

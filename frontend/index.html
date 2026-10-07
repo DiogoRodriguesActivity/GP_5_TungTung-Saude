@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <meta name="description" content="TungTung Saúde: sistema de informação para organizar pacientes, profissionais, consultas, internações e quartos hospitalares.">
+    <title>TungTung Saúde | Gestão hospitalar</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="home-page">
+    <a class="home-skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="home-header">
+        <a class="home-brand" href="./index.html" aria-label="TungTung Saúde — página inicial">
+            <span class="home-brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                    <path d="M19 7h10v12h12v10H29v12H19V29H7V19h12z" />
+                </svg>
+            </span>
+            <span class="home-brand__text">
+                <strong>TungTung Saúde</strong>
+                <span>Gestão hospitalar</span>
+            </span>
+        </a>
+
+        <nav class="home-nav" aria-label="Navegação principal">
+            <a class="home-nav__link home-nav__link--active" href="#inicio" aria-current="page">Início</a>
+            <a class="home-nav__link" href="#modulos">Módulos</a>
+            <a class="home-nav__link" href="./pages/historico.html">Histórico médico</a>
+        </nav>
+
+        <a class="home-header__action" href="./pages/consulta.html">
+            <span aria-hidden="true">+</span> Nova consulta
+        </a>
+    </header>
+
+    <main id="conteudo" class="home-main">
+        <section id="inicio" class="home-hero" aria-labelledby="home-title">
+            <div class="home-hero__content">
+                <p class="home-eyebrow"><span></span> SISTEMA DE INFORMAÇÃO HOSPITALAR</p>
+                <h1 id="home-title">Cuidado organizado.<br><span>Gestão mais eficiente.</span></h1>
+                <p class="home-hero__description">
+                    Centralize as informações do hospital e encontre, em um só lugar.
+                </p>
+                <div class="home-hero__actions">
+                    <a class="home-button home-button--primary" href="#modulos">
+                        Explorar módulos <span aria-hidden="true">→</span>
+                    </a>
+                    <a class="home-button home-button--secondary" href="./pages/consulta.html">Acessar consultas</a>
+                </div>
+                <div class="home-hero__note">
+                    <span class="home-hero__note-icon" aria-hidden="true">✓</span>
+                    <p><strong>Informações conectadas</strong><br>Pacientes, profissionais e atendimentos. Tudo em um só lugar</p>
+                </div>
+            </div>
+
+            <div class="home-hero__visual" aria-label="Visão geral dos recursos do sistema">
+                <div class="home-orbit home-orbit--outer"></div>
+                <div class="home-orbit home-orbit--inner"></div>
+                <div class="home-visual-card">
+                    <div class="home-visual-card__top">
+                        <span class="home-visual-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-1 12-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z" /></svg>
+                        </span>
+                        <span class="home-visual-card__tag">Cuidado integrado</span>
+                    </div>
+                    <h2>Uma visão completa<br>do atendimento</h2>
+                    <p>Do cadastro ao histórico do paciente, com os recursos hospitalares organizados.</p>
+                    <div class="home-visual-card__flow" aria-hidden="true">
+                        <span>Paciente</span><i></i><span>Atendimento</span><i></i><span>Histórico</span>
+                    </div>
+                </div>
+                <span class="home-floating home-floating--top" aria-hidden="true">+</span>
+                <span class="home-floating home-floating--bottom" aria-hidden="true">✓</span>
+            </div>
+        </section>
+
+        <section id="modulos" class="home-modules" aria-labelledby="modules-title">
+            <div class="home-section-heading">
+                <div>
+                    <p class="home-eyebrow">RECURSOS DO SISTEMA</p>
+                    <h2 id="modules-title">Acesse os módulos</h2>
+                    <p>Encontre as áreas principais da gestão hospitalar.</p>
+                </div>
+                <span class="home-section-heading__hint">6 módulos</span>
+            </div>
+
+            <div class="home-module-grid">
+                <a class="home-module-card" href="./pages/paciente.html">
+                    <span class="home-module-card__icon home-module-card__icon--teal" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Pacientes</strong><span>Cadastros e dados de contato</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/profissional.html">
+                    <span class="home-module-card__icon home-module-card__icon--blue" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2a5 5 0 0 0-5 5v2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5Zm-3 7V7a3 3 0 0 1 6 0v2H9Zm2 3h2v2h2v2h-2v2h-2v-2H9v-2h2v-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Profissionais</strong><span>Equipe, registro e especialidade</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/consulta.html">
+                    <span class="home-module-card__icon home-module-card__icon--purple" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V2Zm13 8H4v10h16V10ZM6 13h5v2H6v-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Consultas</strong><span>Agendamentos e atendimentos</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/internacao.html">
+                    <span class="home-module-card__icon home-module-card__icon--orange" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M3 5h2v9h14V9a2 2 0 0 1 2 2v8h-2v-3H5v3H3V5Zm4 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm5 1h5a2 2 0 0 1 2 2v2h-9v-2a2 2 0 0 1 2-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Internações</strong><span>Entradas, quartos e altas</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/quarto.html">
+                    <span class="home-module-card__icon home-module-card__icon--green" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M4 3h16a2 2 0 0 1 2 2v16h-2v-2H4v2H2V5a2 2 0 0 1 2-2Zm0 14h16V5H4v12Zm2-10h5v5H6V7Zm7 0h5v2h-5V7Zm0 4h5v2h-5v-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Quartos</strong><span>Capacidade e disponibilidade</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/historico.html">
+                    <span class="home-module-card__icon home-module-card__icon--pink" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3a9 9 0 1 1-8.5 6H1l4-4 4 4H5.6A7 7 0 1 0 12 5V3Zm-1 4h2v5l3 1.8-1 1.7-4-2.5V7Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Histórico médico</strong><span>Consultas e internações anteriores</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-integrity" aria-label="Organização do atendimento">
+            <span class="home-integrity__icon" aria-hidden="true">✚</span>
+            <div>
+                <strong>Informação organizada para decisões melhores</strong>
+                <p>Consulte registros relacionados e acompanhe a disponibilidade de profissionais e quartos.</p>
+            </div>
+            <a href="./pages/historico.html">Ver histórico <span aria-hidden="true">→</span></a>
+        </section>
+    </main>
+
+    <footer class="app-footer"><a href="../index.html">TungTung Saúde</a></footer>
+</body>
+</body>
+</html>
