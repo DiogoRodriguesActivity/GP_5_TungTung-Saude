@@ -1,0 +1,29 @@
+.tts-card{
+display: flex;
+flex-direction: column;
+padding: 1rem;
+gap: 1rem;
+justify-content: center;
+align-items: center;
+background-color: var(--color-secondary);
+width: 13rem;
+height: 5   0vh;
+border-radius: 10px;
+margin:3rem;
+}
+.tts-card__imagem{
+    border-radius: 50%;
+    width: 8rem;
+}
+.tts-card__nome{
+    font-size: var(--font-size-medium);
+    color: white;
+}
+.tts-card__info{
+    color: white;
+}
+.tts-card__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
