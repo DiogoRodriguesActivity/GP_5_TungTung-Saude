@@ -8,6 +8,11 @@ async function main(dadosCaminho) {
     const pacientes = dados.pacientes;
     
     const container = document.querySelector('[data-type="card"]')
+
+    if (!container) {
+    console.warn('Container [data-type="card"] não encontrado');
+    return;
+    }
     pacientes.forEach(element => {
         const card = criarCard(
         element.nome,
@@ -16,8 +21,8 @@ async function main(dadosCaminho) {
         "",
         );
     container.appendChild(card);
-    container.className='tts-card__container'
 });
+container.classList.add('tts-card__container')
 }
 
 main(dadosCaminho);
