@@ -1,0 +1,20 @@
+.tts-button--basic{
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding-top:0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left:0.5rem ;
+    padding-right:0.5rem ;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease , background-color 0.5s ease;
+
+}
+.tts-button--basic:hover{
+    cursor: pointer;
+    background-color: var(--color-primary-dark);
+    transform:scale(1.12);
+    z-index: 10;
+}
