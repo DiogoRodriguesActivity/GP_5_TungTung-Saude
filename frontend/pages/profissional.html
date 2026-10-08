@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Profissionais | TungTung Saúde</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/pages/profissional.css">
-    <script type="module" defer src="../assets/js/script.js"></script>
-    <script type="module" defer src="../assets/js/pages/profissional.js"></script>
+    <script type="module" src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/pages/profissionais.js"></script>
 </head>
-<body>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteúdo</a>
     <div data-componente="header-base"></div>
-    <main>
-        <h1 class="profissionais-titulo"> Profissionais</h1>
-        <div data-type="card"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃO HOSPITALAR</p><h1>Profissionais</h1><p class="app-heading__description">Informações da equipe de profissionais da saúde.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Novo profissional</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">ⓘ</span><span>Consulte os dados e as especialidades dos profissionais da equipe.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="professional-list-title" data-type="lista-profissionais">
+                <div class="app-toolbar"><div><h2 id="professional-list-title">Profissionais cadastrados</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Buscar profissional</span><input type="search" aria-label="Busca de profissionais"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">⌕</span><strong>Nenhum profissional cadastrado</strong><p>Os profissionais cadastrados serão listados nesta área.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="professional-form-title">
+                <div class="app-toolbar"><div><h2 id="professional-form-title">Cadastro de profissional</h2><p class="app-record-count">Campos previstos no escopo do sistema</p></div></div>
+                <form class="app-form app-form--plain" aria-label="Formulário de profissional">
+                    <div class="app-form__fields">
+                        <div class="app-field app-field--wide"><label for="professional-name">Nome completo <span aria-hidden="true">*</span></label><input id="professional-name" name="name" required></div>
+                        <div class="app-field app-field--wide"><label for="professional-registry">Registro profissional <span aria-hidden="true">*</span></label><input id="professional-registry" name="registry" placeholder="Ex.: CRM-MG 000000" required></div>
+                        <div class="app-field app-field--wide"><label for="professional-specialty">Especialidade <span aria-hidden="true">*</span></label><input id="professional-specialty" name="specialty" required></div>
+                        <div class="app-field"><label for="professional-phone">Telefone <span aria-hidden="true">*</span></label><input id="professional-phone" name="phone" type="tel" required></div>
+                        <div class="app-field"><label for="professional-email">E-mail <span aria-hidden="true">*</span></label><input id="professional-email" name="email" type="email" required></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatórios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar profissional</button></div>
+                </form>
+            </section>
+        </div>
     </main>
     <div data-componente="footer-base"></div>
-
-    
 </body>
 </html>
