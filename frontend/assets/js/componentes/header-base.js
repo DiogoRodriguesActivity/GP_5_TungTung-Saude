@@ -1,45 +1,86 @@
 export function criarHeader(){    
+    const header = document.createElement('header');
+    header.classList.add('app-topbar');
+    const linkConteudo = document.createElement('a')
+    linkConteudo.href='#app-content'
+    linkConteudo.textContent='Pular para o conteúdo'
+    linkConteudo.classList.add('app-skip-link')
+    const linkMarca = document.createElement('a')
+    linkMarca.classList.add('app-brand')
+    linkMarca.href='../index.html'
+    const marcaSpan1=document.createElement('span')
+    marcaSpan1.classList.add('app-brand__mark')
+    marcaSpan1.setAttribute('aria-hidden','true');
 
-const linkNomes  =["Consulta","Historico","Internacao","Paciente","Profissional","Quarto"]; 
-const href = ['','','','','',''];
-const header = document.createElement('header');
-header.className = 'tts-header'
-const logotipo = document.createElement('div');
-logotipo.className = 'tts-header__logotipo'
-const titulo = document.createElement('h1');
-titulo.className = 'tts-header__titulo'
-titulo.textContent="TungTung Saúde"
-const imagem = document.createElement('img')
-imagem.src="https://cdn2.cdnstep.com/vmfBdKCwmq2YemPftKZB/cover-1.thumb256.png";
-imagem.className = 'tts-header__imagem'
-imagem.alt='';
-const nav = document.createElement('nav');3
-nav.className = 'tts-nav';
+    const SVG_NS = 'http://www.w3.org/2000/svg'
+    const marcaSvg = document.createElementNS(SVG_NS,'svg')
+    marcaSvg.setAttribute('viewBox', '0 0 48 48')
+    marcaSvg.setAttribute('focusable', 'false')
 
+    const marcaPath = document.createElementNS(SVG_NS,'path')
+    marcaPath.setAttribute('d','M19 7h10v12h12v10H29v12H19V29H7V19h12z')
+    
+    marcaSvg.appendChild(marcaPath)
+    marcaSpan1.appendChild(marcaSvg)
 
-function criarNavLinks(){
+    const marcaSpan2 = document.createElement('span')
+    const forte = document.createElement('strong')
+    forte.textContent='TungTung Saúde'
+    const pequeno = document.createElement('small')
+    pequeno.textContent='Gestão Hospitalar'
 
-    if( linkNomes.length !== href.length){
-        console.error(`LinkNomes sem par em href, abortando`)
-        return
-    }
+    marcaSpan2.append(forte,pequeno)
 
-    for (let i=0;i<linkNomes.length;i++){
-        if (href[i]=== ""){
-            console.warn(`O link "${linkNomes[i]}" Está sem direcionamento`)
-    }
-    const navLink = document.createElement('a');
-    navLink.className = 'tts-button--basic';
-    navLink.textContent = linkNomes[i];
-    navLink.href = href[i];
-    nav.appendChild(navLink);
-};
-};
-header.appendChild(logotipo);
-logotipo.appendChild(titulo);
-logotipo.appendChild(imagem)
-header.appendChild(nav)
-criarNavLinks();
+    linkMarca.append(marcaSpan1, marcaSpan2)
 
-return header
+    const nav = document.createElement('nav')
+    nav.classList.add('app-nav')
+    nav.setAttribute('aria-label','Navegação principal')
+
+    const navLinkPaciente =  document.createElement('a')
+    navLinkPaciente.href='paciente.html'
+    navLinkPaciente.textContent='Pacientes'
+
+    const navLinkProfissional=document.createElement('a')
+    navLinkProfissional.href = 'profissional.html'
+    navLinkProfissional.textContent='Profissionais'
+
+    const navLinkConsulta = document.createElement('a')
+    navLinkConsulta.href='consulta.html'
+    navLinkConsulta.textContent='Consultas'
+    navLinkConsulta.setAttribute('aria-current','page')
+
+    const navLinkInternacao = document.createElement('a')
+    navLinkInternacao.href='internacao.html'
+    navLinkInternacao.textContent='Internações'
+
+    const navLinkQuarto = document.createElement('a')
+    navLinkQuarto.href='quarto.html'
+    navLinkQuarto.textContent='Quartos'
+    
+    const navLinkHistorico = document.createElement('a')
+    navLinkHistorico.href='historico.html'
+    navLinkHistorico.textContent='Historico'
+
+    nav.append(navLinkPaciente,
+        navLinkProfissional,
+        navLinkConsulta,
+        navLinkInternacao,
+        navLinkQuarto,
+        navLinkHistorico
+    )
+
+    const home = document.createElement('a')
+    home.classList.add('app-home-link')
+    home.href='../index.html'
+    home.textContent='Visão geral'
+    const homeSpan = document.createElement('span')
+    homeSpan.setAttribute('aria-hidden','true')
+    homeSpan.textContent="↗"
+    home.appendChild(homeSpan)
+
+    header.append(linkConteudo,linkMarca,nav,home)
+
+    return header
+
 }

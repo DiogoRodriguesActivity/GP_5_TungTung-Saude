@@ -5,42 +5,55 @@
             "id":"IWK3MFG",
             "nome":"Julio Cesar",
             "imagem":"https://randomuser.me/api/portraits/men/1.jpg",
-            "info":"18 anos, gênero masculino"
+            "cpf":"109.284.820-32",
+            "dataNascimento":"02/10/2007",
+            "telefone":"31925122431",
+            "enderenco":"alameda das alamedas cidade das cidades bairro dos bairros 123",
+            "acompanhante":""
         },
         {
             "id":"P1L4KGN",
             "nome":"Carla Viana",
             "imagem":"https://randomuser.me/api/portraits/women/1.jpg",
-            "info":"21 anos, gênero feminino"
-
+            "cpf":"129.261.523-12",
+            "dataNascimento":"10/02/1987",
+            "telefone":"31967125563",
+            "endereco":"rua das ruas cidade das cidades bairro dos bairros 532",
+            "acompanhante":""
         }
     ],
     "profissionais":[
         {
             "id":"OI2034R",
             "nome":"Augusto Silva Santos",
-        "imagem":"https://randomuser.me/api/portraits/men/34.jpg",
-        "info":"34 anos, otorrinolaringologista"
+            "imagem":"https://randomuser.me/api/portraits/men/34.jpg",
+            "especialidade":"otorrinolaringologista",
+            "crm":"000011",
+            "email":"augusto.silvasantos@gmail.com"
         },
         {   "id":"OI3023K",
             "nome":"Josiane Ferreira Cardoso",
             "imagem":"https://randomuser.me/api/portraits/women/67.jpg",
-            "info":"27 anos, neurologista"
+            "especialidade":"neurologista",
+            "crm":"000021",
+            "email":"josiane.ferreiracardoso@gmail.com"
         }    
         
     ],
     "quartos":[
         {
             "id":"JAKAOQR",
-            "nome":"Quarto 212",
-            "imagem":"https://hospitaliamada.com.br/system/uploads/2025/03/acomodacoes/imagens/left-image-suites-e-apartamentos-especiais76141741805741.webp",
-            "info":"Quarto disponível, lotação 5 pessoas, máximo 10 pessoas"
+            "numeroIdentificacao":"#1023",
+            "andar":"2",
+            "capacidadeMaxima":"10",
+            "situacaoAtual":"Disponível"            
         },
         {
             "id":"IJGIPAT",
-            "nome":"Quarto 101",
-            "imagem":"https://itapira.sp.gov.br/fotos/170872016665d90026c1853703920432.jpg",
-            "info":"Quarto indisponível, lotação 10 pessoas, máximo 10 pessoas"
+            "numeroIdentificacao":"#3519",
+            "andar":"1",
+            "capacidadeMaxima":"2",
+            "situacaoAtual":"Ocupado"
         }
     ],
     "consultas":[
@@ -56,8 +69,43 @@
         "id":"Q01OEJKS",
         "pacienteId":"P1L4KGN",
         "profissionalId":"OI3023K",
+        "data":"10/09/2026",
         "motivo":"Dor de cabeça",
         "observacaoMedica":"Situação leve, apenas necessário medicamento para dores de cabeça"
     }
+    ],
+    "internacoes":[
+        {
+        "id":"1OAJFoAs",
+        "pacienteId":"IWK3MFG",
+        "profissionalId":"OI2034R",
+        "dataEntrada":"11/09/2026",
+        "dataPrevistaAlta":"15/09/2026",
+        "quarto":"IJGIPAT",
+        "acompanhante":"",
+        "dataEfetivaAlta":"14/09/2026",
+        "horarioEntrada":"14:53",
+        "horarioSaida":"09:10",
+        "observacaoMedica":"Paciente recuperando bem, será necessário repouso de 3 semanas"
+        
+        }
+    ],
+    "historicos":[
+        {
+            "id":"10AkAm9",
+            "data":"11/09/2026",
+            "pacienteId":"IWK3MFG",
+            "profissionalId":"OI2034R",
+            "resumo":"Paciente Julio Cesar queixa dores na região das orelhas, foi identificado um problema grave, e a amputação era o único método seguro"
+        },
+        
+        {
+            "id":"QokJ87H",
+            "data":"10/09/2026",
+            "pacienteId":"P1L4KGN",
+            "profissionalId":"OI3023K",
+            "resumo":"Paciente Carla viana queixa dores de cabeça, foi identificado um resfriado leve, a medicação foi prescrita."
+
+        }
     ]
 }

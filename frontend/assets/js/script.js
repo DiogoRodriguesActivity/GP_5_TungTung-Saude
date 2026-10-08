@@ -6,8 +6,9 @@ const componentes = {
     "header-base":criarHeader,
     "footer-base":criarFooter
     // Outros componentes, utilizar data-componente
-}
 
+};
+    
 function injetarComponentes(){
 document.querySelectorAll('[data-componente]').forEach(elemento =>{
     const nome = elemento.dataset.componente;
