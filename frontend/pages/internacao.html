@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Internações | TungTung Saúde</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/pages/internacao.css">
-    <script type="module" defer src="../assets/js/script.js"></script>
-    <script type="module" defer src="../assets/js/pages/internacao.js"></script>
+    <script type="module" src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/pages/internacoes.js"></script>
 </head>
-<body>
-    
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteúdo</a>
+
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃO HOSPITALAR</p><h1>Internações</h1><p class="app-heading__description">Entradas, ocupação de quartos e acompanhamento de altas.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Nova internação</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">ⓘ</span><span>Acompanhe a ocupação dos quartos e as datas de alta.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="admission-list-title" data-type="lista-internacoes">
+                <div class="app-toolbar"><div><h2 id="admission-list-title">Internações cadastradas</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Buscar internação</span><input type="search" aria-label="Busca de internações"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">⌕</span><strong>Nenhuma internação cadastrada</strong><p>As internações cadastradas serão listadas nesta área.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="admission-form-title">
+                <div class="app-toolbar"><div><h2 id="admission-form-title">Registrar internação</h2><p class="app-record-count">Vincule o paciente, o profissional e o quarto</p></div></div>
+                <form class="app-form app-form--plain" aria-label="Formulário de internação">
+                    <div class="app-form__fields">
+                        <div class="app-field"><label for="admission-patient">Paciente <span aria-hidden="true">*</span></label><select id="admission-patient" name="patient" required><option value="" selected>Selecione um paciente</option></select></div>
+                        <div class="app-field"><label for="admission-professional">Profissional responsável <span aria-hidden="true">*</span></label><select id="admission-professional" name="professional" required><option value="" selected>Selecione um profissional</option></select></div>
+                        <div class="app-field"><label for="admission-room">Quarto <span aria-hidden="true">*</span></label><select id="admission-room" name="room" required><option value="" selected>Selecione um quarto</option></select></div>
+                        <div class="app-field"><label for="admission-companion">Acompanhante</label><input id="admission-companion" name="companion"></div>
+                        <div class="app-field"><label for="admission-entry">Data de entrada <span aria-hidden="true">*</span></label><input id="admission-entry" name="entryDate" type="date" required></div>
+                        <div class="app-field"><label for="admission-entry-time">Horário Internação</label><input id="admission-entry-time" name="entryTime" type="time"></div>
+                        <div class="app-field"><label for="admission-exit-time">Horário Saída</label><input id="admission-exit-time" name="exitTime" type="time"></div>
+                        <div class="app-field"><label for="admission-expected">Data prevista de alta <span aria-hidden="true">*</span></label><input id="admission-expected" name="expectedDischarge" type="date" required></div>
+                        <div class="app-field"><label for="admission-discharge">Data efetiva de alta</label><input id="admission-discharge" name="dischargeDate" type="date"></div>
+                        <div class="app-field app-field--wide"><label for="admission-notes">Observações médicas</label><textarea id="admission-notes" name="notes" rows="2"></textarea></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatórios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar internação</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div data-componente="footer-base"></div>
 </body>
 </html>
