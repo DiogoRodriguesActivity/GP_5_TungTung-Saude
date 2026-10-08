@@ -4,21 +4,36 @@
     --font-size-large:3rem;
     
     /* teal */
-    --color-primary: #14b8a6;    
-    --color-primary-dark: #0f766e;
-    --color-primary-light: #ccfbf1;
+	--color-primary: #14b8a6;
+	--color-primary-dark: #0f766e;
+	--color-primary-light: #ccfbf1;
 
     /* azul */
 
-    --color-secondary: #279af1;
-    --color-secondary-dark: #1871b5;
-    --color-secondary-light: #78bef4;
+	--color-secondary: #279af1;
+	--color-secondary-dark: #1871b5;
+	--color-secondary-light: #78bef4;
 
     /* básicas + comuns */
-    --color-success: #16a34a;
-    --color-warning: #f59e0b;
-    --color-danger: #dc2626;
-    --color-info: #0ea5e9;
+	--color-success: #16a34a;
+	--color-warning: #f59e0b;
+	--color-danger: #dc2626;
+	--color-info: #0ea5e9;
+
+	/* Pagina inicial do sistema */
+	--home-ink: #173b3b;
+	--home-muted: #718484;
+	--home-line: #e5efed;
+	--home-surface: #ffffff;
+	--home-background: #f4fbfa;
+
+	/* Sistema interno */
+	--app-ink: #173b3b;
+	--app-muted: #718484;
+	--app-line: #e5efed;
+	--app-primary: #087e70;
+	--app-background: #f4fbfa;
+
 
 
 
