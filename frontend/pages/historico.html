@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Histórico médico | TungTung Saúde</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/pages/historico.css">
-    <script type="module" defer src="../assets/js/script.js"></script>
-    <script type="module" defer src="../assets/js/pages/historico.js"></script>
+    <script type="module" src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/pages/historicos.js"></script>
 </head>
-<body>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteúdo</a>
     
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃO HOSPITALAR</p><h1>Histórico médico</h1><p class="app-heading__description">Consultas realizadas, internações concluídas e registros dos atendimentos.</p></div></div>
+        <div class="app-info-notice"><span aria-hidden="true">ⓘ</span><span>Acompanhe os atendimentos e os registros relacionados a cada paciente.</span></div>
+        <section class="app-panel app-panel--history" aria-labelledby="history-list-title" data-type="lista-historicos">
+            <div class="app-toolbar"><div><h2 id="history-list-title">Registros de atendimento</h2><p class="app-record-count">Nenhum registro encontrado</p></div><div class="app-filters"><label class="app-filter-select"><span class="visually-hidden">Filtrar por paciente</span><select aria-label="Filtrar por paciente"><option>Todos os pacientes</option></select></label><label class="app-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Buscar no histórico</span><input type="search" aria-label="Busca no histórico"></label></div></div>
+            <div class="app-table-wrap"><table class="app-table"><thead><tr><th scope="col">Data</th><th scope="col">Tipo</th><th scope="col">Paciente</th><th scope="col">Profissional</th><th scope="col">Resumo</th></tr></thead><tbody><tr><td class="app-table__empty" colspan="5">Nenhum atendimento no histórico.</td></tr></tbody></table></div>
+        </section>
+    </main>
+
+    <footer data-componente="footer-base"></footer>
 </body>
 </html>
