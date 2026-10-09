@@ -1,5 +1,6 @@
 # GP_5_TungTung-Saude
 
+<<<<<<< HEAD
 Consulta:
 Motivo_da_Consulta: string
 id_medico: string
@@ -53,8 +54,7 @@ Agendamento:
 nome_paciente: string
 numero_paciente: string
 numero_convenio: string
-
-
+=======
 ```
 GP_5_TungTung-Saude
 ├─ backend
@@ -107,3 +107,5 @@ GP_5_TungTung-Saude
 └─ README.md
 
 ```
+>>>>>>> a1a83f75e97ce795b92095bad1865164d57a3da5
+
