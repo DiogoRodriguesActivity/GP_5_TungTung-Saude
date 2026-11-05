@@ -1,3 +1,13 @@
+# Diagrama de Classes
+>Pastas
+```
+Diagrama de Classes
+├─ V1 (Sprint 1) -colocar Data
+├─ V2 (Sprint 2) -05/11/2026
+
+```
+
+## Enredo
 Após a análise do modelo inicial, o hospital identificou que os profissionais da saúde
 possuem diferentes atribuicões e que os atendimentos precisam respeitar regras especıficas
 de acordo com sua natureza.
