@@ -1,0 +1,109 @@
+﻿# GP_5_TungTung-Saude
+
+Consulta:
+Motivo_da_Consulta: string
+id_medico: string
+id_paciente: string
+ObservÃ§Ã£o_Medicas: string
+----------------------------
+Agendamento(): void --cria objeto consulta
+ 
+
+InternaÃ§Ã£o:
+id_quarto: string
+id_medico: string
+id_paciente: string
+acompanhante: string
+horÃ¡rio: date
+data_entrada: date
+data prevista: date
+data efetiva: date
+ObservÃ§Ã£o_Medicas: string
+
+
+Profissional:
+id_medico: string
+Nome: string
+especialidade: string
+Telefone: string
+E-mail: string
+
+
+Paciente:
+CPF: string
+Nome: string
+endereÃ§o: string
+Data_de_Nasc: Date
+Telefone: string
+acompanhante: string
+
+Quarto:
+Numero de identificaÃ§Ã£o
+Andar: 
+Capacidade_maxima_de_paciente: int
+Disponibilidade: Bool
+
+
+
+
+
+
+
+Agendamento:
+nome_paciente: string
+numero_paciente: string
+numero_convenio: string
+
+
+```
+GP_5_TungTung-Saude
+â”œâ”€ backend
+â”œâ”€ frontend
+â”‚  â”œâ”€ assets
+â”‚  â”‚  â”œâ”€ css
+â”‚  â”‚  â”‚  â”œâ”€ componentes
+â”‚  â”‚  â”‚  â”‚  â””â”€ header-base.css
+â”‚  â”‚  â”‚  â”œâ”€ estruturas-base
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ footer.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ header.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ main.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ nav.css
+â”‚  â”‚  â”‚  â”‚  â””â”€ section.css
+â”‚  â”‚  â”‚  â”œâ”€ paginas
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ consulta.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ historico.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ internacao.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ paciente.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ profissional.css
+â”‚  â”‚  â”‚  â”‚  â””â”€ quarto.css
+â”‚  â”‚  â”‚  â”œâ”€ reset.css
+â”‚  â”‚  â”‚  â”œâ”€ style.css
+â”‚  â”‚  â”‚  â””â”€ var.css
+â”‚  â”‚  â”œâ”€ img
+â”‚  â”‚  â””â”€ js
+â”‚  â”‚     â”œâ”€ componentes
+â”‚  â”‚     â”‚  â”œâ”€ botao-base.js
+â”‚  â”‚     â”‚  â””â”€ header-base.js
+â”‚  â”‚     â”œâ”€ dados.js
+â”‚  â”‚     â”œâ”€ estruturas-base
+â”‚  â”‚     â”‚  â”œâ”€ footer.js
+â”‚  â”‚     â”‚  â”œâ”€ header.js
+â”‚  â”‚     â”‚  â”œâ”€ main.js
+â”‚  â”‚     â”‚  â””â”€ nav.js
+â”‚  â”‚     â”œâ”€ paginas
+â”‚  â”‚     â”‚  â”œâ”€ historico.js
+â”‚  â”‚     â”‚  â”œâ”€ internacao.js
+â”‚  â”‚     â”‚  â”œâ”€ paciente.js
+â”‚  â”‚     â”‚  â”œâ”€ profissional.js
+â”‚  â”‚     â”‚  â””â”€ quarto.js
+â”‚  â”‚     â””â”€ script.js
+â”‚  â”œâ”€ index.html
+â”‚  â””â”€ pages
+â”‚     â”œâ”€ historico.html
+â”‚     â”œâ”€ internacao.html
+â”‚     â”œâ”€ paciente.html
+â”‚     â”œâ”€ profissional.html
+â”‚     â””â”€ quarto.html
+â””â”€ README.md
+
+```
