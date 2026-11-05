@@ -7,13 +7,15 @@ public abstract class ProfissionalSaude {
     private ArrayList<Especialidade> atuacoes;
     private Boolean disponibilidade;
 
-    public ProfissionalSaude(String registroProfissional, String nome, String telefone, String email){
+
+    public ProfissionalSaude(String registroProfissional,String nome, String telefone, String email){
         this.registroProfissional = registroProfissional;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         atuacoes = new ArrayList<Especialidade>();
         disponibilidade = true;
+
     }
     public void adicionarAtuacao(Especialidade atuacao){
         atuacoes.add(atuacao);
@@ -45,9 +47,6 @@ public abstract class ProfissionalSaude {
         else{
             throw new ProfissionalIndisponivelException("Esse profissional não está assignado a esta consulta");
         }
-    }
-    public  verificarStatus(){
-        // ???
     }
     public boolean VerificarDisponibilidade(){
         if(disponibilidade){
@@ -108,16 +107,18 @@ public abstract class ProfissionalSaude {
 
 
 
-    public Especialidade getAtuacao() {
-        return atuacao;
+    public ArrayList<Especialidade> getAtuacao() {
+        return atuacoes;
     }
 
 
 
-    public void setAtuacao(Especialidade atuacao) {
-        this.atuacao = atuacao;
+    public void adicionarEspecialidade(Especialidade especialidade){
+        atuacoes.add(especialidade);
     }
-
+    public void removerEspecialidade(Especialidade especialidade){
+        atuacoes.remove(especialidade);
+    }
 
 
     public Boolean getDisponibilidade() {
