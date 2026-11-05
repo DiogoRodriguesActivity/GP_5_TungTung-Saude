@@ -121,7 +121,6 @@ public class ConsultaController {
         }
     }
 
-    /* Ex.: GET /consultas?status=AGENDADA */
     @GetMapping
     public List<ConsultaResponse> listar(@RequestParam(required = false) SituacaoConsulta status) {
         List<ConsultaResponse> resposta = new ArrayList<>();
