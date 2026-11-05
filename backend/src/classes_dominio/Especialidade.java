@@ -1,0 +1,11 @@
+public enum Especialidade {
+    CARDIOLOGISTA,
+    NEUROLOGISTA,
+    ORTOPEDISTA,
+    PLASTICO,
+    CARDIOVASCULAR,
+    NEUROCIRURGIAO
+
+
+
+}
