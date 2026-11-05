@@ -7,14 +7,6 @@ public abstract class ProfissionalSaude {
     private ArrayList<Especialidade> atuacoes;
     private Boolean disponibilidade;
 
-    public ProfissionalSaude(String registroProfissional, String nome, String telefone, String email){
-        this.registroProfissional = registroProfissional;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-        atuacoes = new ArrayList<Especialidade>();
-        disponibilidade = true;
-    }
     public void adicionarAtuacao(Especialidade atuacao){
         atuacoes.add(atuacao);
     }

@@ -16,11 +16,19 @@ public class Paciente {
     private String endereco;
     private String email;
     private Historico historico;
-    private String acompanhanteNome;
+    public boolean isDisponibilidade() {
+        return disponibilidade;
+    }
 
-    // Construtor vazio
+    public void setDisponibilidade(boolean disponibilidade) {
+        this.disponibilidade = disponibilidade;
+    }
+
+    private String acompanhanteNome;
+    private boolean disponibilidade;
     public Paciente() {
         this.telefoneOutro = new ArrayList<>();
+        this.disponibilidade = true;
     }
 
     public void cadastrar() {

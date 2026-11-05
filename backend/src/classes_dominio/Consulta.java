@@ -47,10 +47,6 @@ public abstract class Consulta{
         this.observacoes = observacoes;
     }
 
-    public ArrayList<Consulta> buscarConsulta(){
-        // ???
-    }
-
     public abstract void assignarProfissional(ProfissionalSaude profissional) throws ProfissionalInelegivelException, ProfissionalIndisponivelException;
 
     public void agendarConsulta(Date dataConsulta, Date horario){
