@@ -1,4 +1,4 @@
-
+import java.util.Date;
 
 public class ConsultaEspecializada extends Consulta{
     
@@ -6,7 +6,12 @@ public class ConsultaEspecializada extends Consulta{
 
     // public void buscarEspecialista()
 
-
+    public ConsultaEspecializada(Date dataConsulta, Date horario,String motivo,ProfissionalSaude profissional,Paciente paciente,Especialidade especialidade){
+        super(dataConsulta,horario,motivo,profissional,paciente,especialidade);
+    }
+    public ConsultaEspecializada(){
+        super();
+    }
 @Override
 
     public void assignarProfissional(ProfissionalSaude profissional) throws ProfissionalIndisponivelException, ProfissionalInelegivelException{

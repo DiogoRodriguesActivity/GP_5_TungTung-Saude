@@ -1,4 +1,7 @@
 public class Cirurgiao extends ProfissionalSaude {
-    private set<TipoCirurgico> atuacaoCirurgica;
-    
+
+        public Cirurgiao(String registroProfissional,String nome, String telefone, String email){
+            super(registroProfissional, nome, telefone, email);
+        }
+
 }

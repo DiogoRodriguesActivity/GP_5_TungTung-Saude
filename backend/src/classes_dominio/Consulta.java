@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.util.ArrayList;
 
 public abstract class Consulta{
     private Date dataConsulta;
@@ -10,16 +9,26 @@ public abstract class Consulta{
     private ProfissionalSaude profissional;
     private Paciente paciente;
     private Especialidade especialidade;
-    
+
+    public Consulta(Date dataConsulta, Date horario,String motivo,ProfissionalSaude profissional,Paciente paciente,Especialidade especialidade){
+        this.dataConsulta = dataConsulta;
+        this.horario = horario;
+        this.motivo = motivo;
+        this.profissional = profissional;
+        this.paciente = paciente;
+        this.especialidade = especialidade;
+        status = SituacaoConsulta.AGENDADA;
+    }
     public Consulta(){
         dataConsulta = null;
         horario = null;
-        status = null;
         motivo = null;
-        observacoes = null;
-        profissional =  null;
+        profissional = null;
         paciente = null;
+        especialidade = null;
+        status = null;
     }
+    
     public Especialidade getEspecialidade() {
         return especialidade;
     }

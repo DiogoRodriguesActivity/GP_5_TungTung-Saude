@@ -1,5 +1,9 @@
-import java.util.Set;
-
 public class MedicoEspecialista extends ProfissionalSaude {
-    private Set<Especialidade> especialidades; 
+
+
+
+    public MedicoEspecialista(String registroProfissional,String nome, String telefone, String email){
+    super(registroProfissional,nome,telefone,email);
+    }
+    
 }

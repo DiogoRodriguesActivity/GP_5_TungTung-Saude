@@ -1,7 +1,10 @@
+import java.util.Date;
+
 public class ConsultaRotina extends Consulta{
 
 
-    public ConsultaRotina(){
+    public ConsultaRotina(Date dataConsulta, Date horario,String motivo,ProfissionalSaude profissional,Paciente paciente,Especialidade especialidade){
+    super(dataConsulta,horario,motivo,profissional,paciente,especialidade);
     }
 
     @Override 
