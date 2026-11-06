@@ -1,0 +1,2873 @@
+﻿.tts-button--basic{
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding-top:0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left:0.5rem ;
+    padding-right:0.5rem ;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease , background-color 0.5s ease;
+    width: fit-content;
+}
+.tts-button--basic:hover{
+    cursor: pointer;
+    background-color: var(--color-primary-dark);
+    transform:scale(1.12);
+    z-index: 10;
+}
+.tts-card{
+display: flex;
+flex-direction: column;
+padding: 1rem;
+gap: 1rem;
+justify-content: center;
+align-items: center;
+background-color: var(--color-secondary);
+width: 13rem;
+height: 5   0vh;
+border-radius: 10px;
+margin:3rem;
+}
+.tts-card__imagem{
+    border-radius: 50%;
+    width: 8rem;
+}
+.tts-card__nome{
+    font-size: var(--font-size-medium);
+    color: white;
+}
+.tts-card__info{
+    color: white;
+}
+.tts-card__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.tts-footer{
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--color-primary-light);
+    padding: 1rem;
+}
+.tts-footer__conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.tts-footer_links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.tts-footer__subtitulo{
+    color: var(--color-primary);
+}
+.tts-footer__texto{
+    font-size: 1rem;
+}
+.tts-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+    background-color: var(--color-primary-light);
+    padding: 0.2rem;
+    border-radius: 16px;
+    height: 20vh;
+}
+.tts-header__titulo{
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    color: var(--color-primary);
+
+}
+.tts-header__logotipo{
+    display: flex;
+    gap: 1.2rem;
+    display: flex;
+    gap: 1.2rem;
+
+}
+.tts-header__imagem{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--color-primary);
+}
+.tts-nav{
+    display: flex;
+    gap:0.9rem ;
+    margin-right: 0.5rem;
+    flex-wrap: wrap;
+}
+.tts-nav__link{
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding-top:0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left:0.5rem ;
+    padding-right:0.5rem ;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease , background-color 0.5s ease;
+
+}
+.tts-nav__link:hover{
+    cursor: pointer;
+    background-color: var(--color-primary-dark);
+    transform:scale(1.12);
+    z-index: 10;
+}
+.hospital-page {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background: var(--app-background);
+	color: var(--app-ink);
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.hospital-page #hospital-app {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.hospital-page [hidden] {
+	display: none !important;
+}
+
+.app-skip-link {
+	position: absolute;
+	top: -4rem;
+	left: 1rem;
+	z-index: 20;
+	padding: 0.75rem 1rem;
+	border-radius: 0.75rem;
+	background: #fff;
+	color: var(--app-ink);
+}
+
+.app-skip-link:focus {
+	top: 1rem;
+}
+
+.app-topbar,
+.app-main,
+.app-footer {
+	width: min(1180px, calc(100% - 3rem));
+	margin-inline: auto;
+}
+
+.app-topbar {
+	display: flex;
+	min-height: 82px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.25rem;
+	border-bottom: 1px solid rgba(22, 85, 78, 0.08);
+}
+
+.app-brand {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	gap: 0.7rem;
+	color: var(--app-ink);
+	text-decoration: none;
+}
+
+.app-brand__mark {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	place-items: center;
+	border-radius: 14px;
+	background: #d9f5ee;
+	color: #078978;
+}
+
+.app-brand__mark svg {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+}
+
+.app-brand > span:last-child {
+	display: grid;
+	gap: 0.1rem;
+}
+
+.app-brand strong {
+	font-size: 0.95rem;
+	font-weight: 750;
+}
+
+.app-brand small {
+	color: var(--app-muted);
+	font-size: 0.7rem;
+}
+
+.app-nav {
+	display: flex;
+	align-items: center;
+	gap: clamp(0.75rem, 1.8vw, 1.5rem);
+}
+
+.app-nav a,
+.app-home-link {
+	color: #617775;
+	font-size: 0.8rem;
+	font-weight: 650;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.app-nav a:hover,
+.app-nav a[aria-current="page"] {
+	color: var(--app-primary);
+}
+
+.app-home-link {
+	padding: 0.6rem 0.8rem;
+	border: 1px solid #dcebe7;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.app-home-link span {
+	margin-left: 0.25rem;
+	color: var(--app-primary);
+}
+
+.app-main {
+	flex: 1;
+	padding-block: 3.15rem 2rem;
+}
+
+.app-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.7rem;
+}
+
+.app-eyebrow {
+	margin: 0 0 0.45rem;
+	color: #138b7c;
+	font-size: 0.68rem;
+	font-weight: 800;
+	letter-spacing: 0.13em;
+}
+
+.app-heading h1 {
+	margin: 0;
+	color: #153d3b;
+	font-size: clamp(2rem, 4vw, 2.8rem);
+	font-weight: 760;
+	letter-spacing: -0.06em;
+}
+
+.app-heading__description {
+	margin: 0.5rem 0 0;
+	color: var(--app-muted);
+	font-size: 0.92rem;
+}
+
+.app-button {
+	display: inline-flex;
+	min-height: 42px;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
+	padding: 0.65rem 1rem;
+	border: 1px solid transparent;
+	border-radius: 11px;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.82rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.app-button:hover {
+	transform: translateY(-1px);
+}
+
+.app-button--primary {
+	background: var(--app-primary);
+	box-shadow: 0 7px 16px rgba(8, 126, 112, 0.13);
+	color: #fff;
+}
+
+.app-button--primary:hover {
+	background: #06695e;
+	color: #fff;
+}
+
+.app-button--primary > span {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.app-button--secondary {
+	border-color: #d5e7e3;
+	background: #fff;
+	color: #28635c;
+}
+
+.app-button--secondary:hover {
+	border-color: #aad6cd;
+	color: var(--app-primary);
+}
+
+.app-info-notice {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.6rem;
+	margin-bottom: 1rem;
+	padding: 0.75rem 0.9rem;
+	border: 1px solid #dfeeea;
+	border-radius: 11px;
+	background: #eff8f5;
+	color: #52736d;
+	font-size: 0.74rem;
+	line-height: 1.5;
+}
+
+.app-info-notice > span:first-child {
+	color: #148875;
+	font-size: 0.9rem;
+}
+
+.app-panel {
+	min-height: 330px;
+	padding: 1.4rem;
+	border: 1px solid var(--app-line);
+	border-radius: 18px;
+	background: #fff;
+	box-shadow: 0 10px 30px rgba(30, 78, 73, 0.035);
+}
+
+.app-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.1rem;
+}
+
+.app-toolbar h2 {
+	margin: 0;
+	color: #244946;
+	font-size: 1rem;
+	font-weight: 750;
+}
+
+.app-record-count {
+	margin: 0.25rem 0 0;
+	color: #879896;
+	font-size: 0.72rem;
+}
+
+.app-filters {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+}
+
+.app-search{
+    font-size: 12px;
+}
+
+.app-search,
+.app-filter-select {
+	display: flex;
+	min-height: 40px;
+	align-items: center;
+	gap: 0.5rem;
+	padding-inline: 0.75rem;
+	border: 1px solid #e3ecea;
+	border-radius: 10px;
+	background: #fbfdfc;
+	color: #78908b;
+}
+
+.app-search > span:first-child {
+	font-size: 1.1rem;
+}
+
+.app-search input,
+.app-filter-select select {
+	min-width: 170px;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #365852;
+	font: inherit;
+	font-size: 0.78rem;
+}
+
+.app-filter-select select {
+	min-width: 150px;
+}
+
+.app-search:focus-within,
+.app-filter-select:focus-within {
+	border-color: #7bcabb;
+	box-shadow: 0 0 0 3px rgba(81, 185, 165, 0.12);
+}
+
+.app-table-wrap {
+	overflow-x: auto;
+	width: 100%;
+}
+
+.app-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.app-table th {
+	padding: 0.8rem 0.7rem;
+	border-bottom: 1px solid #e9f0ee;
+	color: #82918f;
+	font-size: 0.67rem;
+	font-weight: 750;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.app-table td {
+	max-width: 260px;
+	padding: 0.95rem 0.7rem;
+	border-bottom: 1px solid #f0f4f3;
+	color: #617572;
+	font-size: 0.78rem;
+	line-height: 1.5;
+	vertical-align: middle;
+}
+
+.app-table tr:last-child td {
+	border-bottom: 0;
+}
+
+.app-table__primary {
+	color: #294a46 !important;
+	font-weight: 700;
+}
+
+.app-status {
+	display: inline-flex;
+	padding: 0.32rem 0.55rem;
+	border-radius: 20px;
+	background: #eaf7f1;
+	color: #278261;
+	font-size: 0.66rem;
+	font-weight: 750;
+	white-space: nowrap;
+}
+
+.app-status--pending {
+	background: #fff6df;
+	color: #9b741d;
+}
+
+.app-status--warning {
+	background: #fff0e6;
+	color: #a9602c;
+}
+
+.app-status--danger {
+	background: #fff0f0;
+	color: #a94e56;
+}
+
+.app-table__actions {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.app-table__actions button {
+	margin-left: 0.25rem;
+	padding: 0.35rem 0.45rem;
+	border: 0;
+	border-radius: 7px;
+	background: transparent;
+	color: #147e70;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.app-table__actions button:hover {
+	background: #edf8f5;
+}
+
+.app-table__actions .app-table__delete {
+	color: #ad5961;
+}
+
+.app-table__actions .app-table__delete:hover {
+	background: #fff1f1;
+}
+
+.app-empty {
+	display: grid;
+	min-height: 230px;
+	place-content: center;
+	justify-items: center;
+	gap: 0.6rem;
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.app-empty__icon {
+	display: grid;
+	width: 46px;
+	height: 46px;
+	place-items: center;
+	border-radius: 15px;
+	background: #eff8f5;
+	color: #248d7b;
+	font-size: 1.4rem;
+}
+
+.app-empty strong {
+	color: #365852;
+	font-size: 0.92rem;
+}
+
+.app-empty p {
+	max-width: 350px;
+	margin: 0 0 0.4rem;
+	color: #81928f;
+	font-size: 0.77rem;
+	line-height: 1.55;
+}
+
+.app-footnote {
+	margin: 1rem 0 0;
+	color: #91a09d;
+	font-size: 0.69rem;
+}
+
+.app-footer {
+	display: flex;
+	min-height: 72px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	border-top: 1px solid rgba(22, 85, 78, 0.08);
+	color: #879896;
+	font-size: 0.7rem;
+}
+
+.app-footer a {
+	color: #47716a;
+	font-weight: 750;
+	text-decoration: none;
+}
+
+.app-dialog {
+	width: min(680px, calc(100% - 2rem));
+	max-height: min(90vh, 820px);
+	padding: 0;
+	border: 1px solid #dfeae7;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 25px 80px rgba(20, 55, 50, 0.24);
+}
+
+.app-dialog::backdrop {
+	background: rgba(19, 48, 45, 0.42);
+	backdrop-filter: blur(3px);
+}
+
+.app-form {
+	max-height: inherit;
+	overflow-y: auto;
+	padding: 1.6rem;
+}
+
+.app-dialog__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.3rem;
+}
+
+.app-dialog__header h2 {
+	margin: 0;
+	color: #1a4140;
+	font-size: 1.45rem;
+	font-weight: 750;
+	letter-spacing: -0.04em;
+}
+
+.app-dialog__header > div > p:last-child {
+	margin: 0.35rem 0 0;
+	color: #718484;
+	font-size: 0.8rem;
+}
+
+.app-dialog__close {
+	width: 34px;
+	height: 34px;
+	border: 0;
+	border-radius: 10px;
+	background: #f2f7f6;
+	color: #5c7772;
+	cursor: pointer;
+	font-size: 1.35rem;
+}
+
+.app-form__fields {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.95rem 0.8rem;
+}
+
+.app-field {
+	display: grid;
+	min-width: 0;
+	gap: 0.42rem;
+}
+
+.app-field--wide {
+	grid-column: 1 / -1;
+}
+
+.app-field label {
+	color: #476560;
+	font-size: 0.74rem;
+	font-weight: 700;
+}
+
+.app-field label span {
+	color: #d77a61;
+}
+
+.app-field input,
+.app-field select,
+.app-field textarea {
+	width: 100%;
+	min-height: 42px;
+	padding: 0.65rem 0.75rem;
+	border: 1px solid #dfeae7;
+	border-radius: 9px;
+	outline: 0;
+	background: #fcfefd;
+	color: #294a46;
+	font: inherit;
+	font-size: 0.8rem;
+}
+
+.app-field textarea {
+	min-height: 82px;
+	resize: vertical;
+}
+
+.app-field input:focus,
+.app-field select:focus,
+.app-field textarea:focus {
+	border-color: #73c6b6;
+	box-shadow: 0 0 0 3px rgba(81, 185, 165, 0.12);
+}
+
+.app-field input::placeholder,
+.app-field textarea::placeholder {
+	color: #a0afac;
+}
+
+.app-form__error {
+	margin: 1rem 0 0;
+	padding: 0.7rem 0.8rem;
+	border: 1px solid #f1d5d5;
+	border-radius: 9px;
+	background: #fff5f4;
+	color: #9f4848;
+	font-size: 0.76rem;
+}
+
+.app-form__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.6rem;
+	margin-top: 1.3rem;
+	padding-top: 1rem;
+	border-top: 1px solid #edf2f0;
+}
+
+.app-content-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	align-items: start;
+	gap: 1rem;
+}
+
+.app-form--plain {
+	max-height: none;
+	overflow: visible;
+	padding: 0;
+}
+
+.app-form--plain .app-form__fields {
+	margin-top: 0.2rem;
+}
+
+.app-form-hint {
+	margin: 0.85rem 0 0;
+	color: #899895;
+	font-size: 0.68rem;
+	line-height: 1.5;
+}
+
+.app-form--plain .app-form__actions button:disabled {
+	opacity: 0.58;
+	cursor: not-allowed;
+}
+
+.app-table__empty {
+	padding-block: 1.5rem !important;
+	color: #81928f !important;
+	text-align: center;
+}
+
+.hospital-page a:focus-visible,
+.hospital-page button:focus-visible {
+	outline: 3px solid #51b9a5;
+	outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+	.app-topbar,
+	.app-main,
+	.app-footer {
+		width: min(100% - 2rem, 760px);
+	}
+
+	.app-topbar {
+		flex-wrap: wrap;
+		padding-block: 0.8rem;
+	}
+
+	.app-nav {
+		order: 3;
+		width: 100%;
+		justify-content: space-between;
+		padding-top: 0.25rem;
+	}
+
+	.app-table {
+		min-width: 720px;
+	}
+
+	.app-content-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	.app-topbar,
+	.app-main,
+	.app-footer {
+		width: calc(100% - 1.5rem);
+	}
+
+	.app-topbar {
+		gap: 0.7rem;
+	}
+
+	.app-nav {
+		gap: 0.35rem;
+	}
+
+	.app-nav a {
+		font-size: 0.68rem;
+	}
+
+	.app-home-link {
+		padding: 0.5rem 0.6rem;
+		font-size: 0.72rem;
+	}
+
+	.app-main {
+		padding-top: 2rem;
+	}
+
+	.app-heading {
+		align-items: flex-start;
+		flex-direction: column;
+		margin-bottom: 1.2rem;
+	}
+
+	.app-heading .app-button {
+		width: 100%;
+	}
+
+	.app-panel {
+		padding: 1rem 0.75rem;
+	}
+
+	.app-form--plain {
+		padding: 0;
+	}
+
+	.app-toolbar {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.app-filters {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.app-search input,
+	.app-filter-select select {
+		width: 100%;
+	}
+
+	.app-search,
+	.app-filter-select {
+		min-height: 42px;
+	}
+
+	.app-footer {
+		min-height: 64px;
+		font-size: 0.63rem;
+	}
+
+	.app-form {
+		padding: 1.15rem;
+	}
+
+	.app-form__fields {
+		grid-template-columns: 1fr;
+	}
+
+	.app-field--wide {
+		grid-column: auto;
+	}
+}
+
+.consulta{
+display: flex;
+width: fit-content;
+margin-left:1rem;
+flex-direction: column;
+background-color: var(--color-secondary);
+padding: 1rem;
+border-radius: 16px;
+max-width: 20rem;
+}
+.consulta__titulo{
+    color: var(--color-primary-dark);
+}
+.consulta__texto{
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp:3;
+    -webkit-box-orient: vertical;
+    text-overflow: hidden;
+}
+.consulta__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.consulta a{
+    font-size:1.3rem;
+    margin-top:auto;
+    justify-self: flex-end;
+    align-self: center;
+}
+.consulta{
+display: flex;
+width: fit-content;
+margin-left:1rem;
+flex-direction: column;
+background-color: var(--color-secondary);
+padding: 1rem;
+border-radius: 16px;
+max-width: 20rem;
+}
+.consulta__titulo{
+    color: var(--color-primary-dark);
+}
+.consulta__texto{
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp:3;
+    -webkit-box-orient: vertical;
+    text-overflow: hidden;
+}
+.consulta__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.consulta a{
+    font-size:1.3rem;
+    margin-top:auto;
+    justify-self: flex-end;
+    align-self: center;
+}
+.home-page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: var(--home-background);
+	color: var(--home-ink);
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.home-page a {
+	text-decoration: none;
+}
+
+.home-skip-link {
+	position: absolute;
+	top: -4rem;
+	left: 1rem;
+	z-index: 20;
+	padding: 0.75rem 1rem;
+	border-radius: 0.75rem;
+	background: #ffffff;
+	color: var(--home-ink);
+}
+
+.home-skip-link:focus {
+	top: 1rem;
+}
+
+.home-header,
+.home-main,
+.home-footer {
+	width: min(1180px, calc(100% - 3rem));
+	margin-inline: auto;
+}
+
+.home-header {
+	display: flex;
+	min-height: 88px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	border-bottom: 1px solid rgba(22, 85, 78, 0.08);
+}
+
+.home-brand {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	gap: 0.75rem;
+	color: var(--home-ink);
+}
+
+.home-brand__mark {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	place-items: center;
+	border-radius: 14px;
+	background: #d9f5ee;
+	color: #078978;
+}
+
+.home-brand__mark svg {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+}
+
+.home-brand__text,
+.home-brand__text strong,
+.home-brand__text span {
+	display: block;
+}
+
+.home-brand__text strong {
+	font-size: 0.98rem;
+	font-weight: 750;
+	letter-spacing: -0.03em;
+}
+
+.home-brand__text span {
+	margin-top: 0.12rem;
+	color: var(--home-muted);
+	font-size: 0.72rem;
+}
+
+.home-nav {
+	display: flex;
+	align-items: center;
+	gap: clamp(1rem, 2.5vw, 2.2rem);
+}
+
+.home-nav__link {
+	padding-block: 0.5rem;
+	color: #617775;
+	font-size: 0.87rem;
+	font-weight: 600;
+	transition: color 160ms ease;
+}
+
+.home-nav__link:hover,
+.home-nav__link--active {
+	color: #087e70;
+}
+
+.home-header__action,
+.home-button {
+	display: inline-flex;
+	min-height: 44px;
+	align-items: center;
+	justify-content: center;
+	gap: 0.55rem;
+	padding: 0.7rem 1.1rem;
+	border: 1px solid transparent;
+	border-radius: 12px;
+	font-size: 0.86rem;
+	font-weight: 700;
+	transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.home-header__action,
+.home-button--primary {
+	background: #087e70;
+	color: #ffffff;
+	box-shadow: 0 8px 18px rgba(8, 126, 112, 0.14);
+}
+
+.home-header__action:hover,
+.home-button--primary:hover {
+	transform: translateY(-2px);
+	background: #06695e;
+	color: #ffffff;
+	box-shadow: 0 10px 22px rgba(8, 126, 112, 0.2);
+}
+
+.home-header__action span {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 0.8;
+}
+
+.home-main {
+	flex: 1;
+}
+
+.home-hero {
+	display: grid;
+	min-height: 430px;
+	grid-template-columns: 1.1fr 0.9fr;
+	align-items: center;
+	gap: 3rem;
+	padding-block: 3.5rem 3rem;
+}
+
+.home-eyebrow {
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	margin: 0 0 1rem;
+	color: #138b7c;
+	font-size: 0.7rem;
+	font-weight: 800;
+	letter-spacing: 0.13em;
+}
+
+.home-eyebrow > span {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #22b89b;
+	box-shadow: 0 0 0 4px rgba(34, 184, 155, 0.12);
+}
+
+.home-hero h1 {
+	margin: 0;
+	color: #153d3b;
+	font-size: clamp(2.35rem, 4.4vw, 3.9rem);
+	font-weight: 760;
+	letter-spacing: -0.065em;
+	line-height: 1.09;
+}
+
+.home-hero h1 span {
+	color: #159686;
+}
+
+.home-hero__description {
+	max-width: 510px;
+	margin: 1.25rem 0 0;
+	color: #687f7e;
+	font-size: 1rem;
+	line-height: 1.75;
+}
+
+.home-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 1.7rem;
+}
+
+.home-button--primary span,
+.home-integrity > a span {
+	font-size: 1.1rem;
+	transition: transform 160ms ease;
+}
+
+.home-button--primary:hover span,
+.home-integrity > a:hover span {
+	transform: translateX(3px);
+}
+
+.home-button--secondary {
+	border-color: #d5e7e3;
+	background: rgba(255, 255, 255, 0.72);
+	color: #28635c;
+}
+
+.home-button--secondary:hover {
+	transform: translateY(-2px);
+	border-color: #aad6cd;
+	background: #ffffff;
+	color: #087e70;
+}
+
+.home-hero__note {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+
+.home-hero__note-icon {
+	display: grid;
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+	place-items: center;
+	border-radius: 50%;
+	background: #ddf4e9;
+	color: #138157;
+	font-size: 0.9rem;
+	font-weight: 800;
+}
+
+.home-hero__note p {
+	margin: 0;
+	color: #778987;
+	font-size: 0.76rem;
+	line-height: 1.5;
+}
+
+.home-hero__note strong {
+	color: #335b57;
+	font-size: 0.81rem;
+}
+
+.home-hero__visual {
+	position: relative;
+	display: grid;
+	min-height: 340px;
+	place-items: center;
+	isolation: isolate;
+}
+
+.home-hero__visual::before {
+	position: absolute;
+	z-index: -2;
+	width: min(340px, 90%);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: linear-gradient(145deg, #d8f2ec, #e9f8f5 58%, #e0f3ef);
+	content: "";
+}
+
+.home-orbit {
+	position: absolute;
+	z-index: -1;
+	width: 360px;
+	height: 160px;
+	border: 1px solid rgba(19, 143, 127, 0.16);
+	border-radius: 50%;
+	transform: rotate(-32deg);
+}
+
+.home-orbit--inner {
+	width: 315px;
+	height: 130px;
+	transform: rotate(35deg);
+}
+
+.home-visual-card {
+	width: min(330px, 88%);
+	padding: 1.6rem;
+	border: 1px solid rgba(255, 255, 255, 0.9);
+	border-radius: 24px;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 24px 55px rgba(29, 90, 81, 0.15);
+	backdrop-filter: blur(12px);
+	transform: rotate(-2deg);
+}
+
+.home-visual-card__top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.home-visual-card__icon {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	place-items: center;
+	border-radius: 14px;
+	background: #e0f5ef;
+	color: #0b927e;
+}
+
+.home-visual-card__icon svg {
+	width: 24px;
+	fill: currentColor;
+}
+
+.home-visual-card__tag {
+	padding: 0.4rem 0.65rem;
+	border-radius: 20px;
+	background: #eff9f5;
+	color: #26816e;
+	font-size: 0.65rem;
+	font-weight: 700;
+}
+
+.home-visual-card h2 {
+	margin: 1.35rem 0 0.45rem;
+	color: #1c4642;
+	font-size: 1.32rem;
+	font-weight: 750;
+	letter-spacing: -0.04em;
+	line-height: 1.25;
+}
+
+.home-visual-card > p {
+	margin: 0;
+	color: #718583;
+	font-size: 0.78rem;
+	line-height: 1.65;
+}
+
+.home-visual-card__flow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.4rem;
+	margin-top: 1.35rem;
+	padding-top: 1rem;
+	border-top: 1px solid #edf2f0;
+	color: #3d6761;
+	font-size: 0.62rem;
+	font-weight: 700;
+}
+
+.home-visual-card__flow i {
+	width: 20px;
+	height: 1px;
+	background: #a6d9ce;
+}
+
+.home-floating {
+	position: absolute;
+	display: grid;
+	width: 38px;
+	height: 38px;
+	place-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.9);
+	border-radius: 13px;
+	background: #ffffff;
+	box-shadow: 0 8px 25px rgba(30, 97, 84, 0.12);
+	color: #16a18c;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.home-floating--top {
+	top: 14%;
+	right: 8%;
+}
+
+.home-floating--bottom {
+	bottom: 13%;
+	left: 7%;
+	color: #efae4a;
+	font-size: 1.1rem;
+}
+
+.home-modules {
+	padding-block: 1rem 3.25rem;
+}
+
+.home-section-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.3rem;
+}
+
+.home-section-heading .home-eyebrow {
+	margin-bottom: 0.45rem;
+}
+
+.home-section-heading h2 {
+	margin: 0;
+	color: #1a4140;
+	font-size: 1.65rem;
+	font-weight: 750;
+	letter-spacing: -0.045em;
+}
+
+.home-section-heading > div > p:last-child {
+	margin: 0.4rem 0 0;
+	color: var(--home-muted);
+	font-size: 0.88rem;
+}
+
+.home-section-heading__hint {
+	padding: 0.4rem 0.7rem;
+	border: 1px solid #dcebe7;
+	border-radius: 20px;
+	color: #64807a;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.home-module-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.85rem;
+}
+
+.home-module-card {
+	display: flex;
+	min-height: 104px;
+	align-items: center;
+	gap: 0.9rem;
+	padding: 1.1rem;
+	border: 1px solid #e6efed;
+	border-radius: 16px;
+	background: var(--home-surface);
+	box-shadow: 0 4px 14px rgba(30, 78, 73, 0.025);
+	transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+}
+
+.home-module-card:hover {
+	transform: translateY(-3px);
+	border-color: #b9ded5;
+	box-shadow: 0 14px 28px rgba(30, 78, 73, 0.09);
+}
+
+.home-module-card__icon {
+	display: grid;
+	width: 46px;
+	height: 46px;
+	flex: 0 0 46px;
+	place-items: center;
+	border-radius: 15px;
+}
+
+.home-module-card__icon svg {
+	width: 23px;
+	fill: currentColor;
+}
+
+.home-module-card__icon--teal { background: #e3f7f1; color: #118976; }
+.home-module-card__icon--blue { background: #e8f2ff; color: #3477c3; }
+.home-module-card__icon--purple { background: #f0ebff; color: #7960c6; }
+.home-module-card__icon--orange { background: #fff1e3; color: #d88536; }
+.home-module-card__icon--green { background: #e9f5e8; color: #598e50; }
+.home-module-card__icon--pink { background: #ffedf1; color: #cf6880; }
+
+.home-module-card__body {
+	display: grid;
+	min-width: 0;
+	gap: 0.28rem;
+}
+
+.home-module-card__body strong {
+	color: #244946;
+	font-size: 0.91rem;
+	font-weight: 750;
+}
+
+.home-module-card__body > span {
+	color: #788987;
+	font-size: 0.73rem;
+	line-height: 1.4;
+}
+
+.home-module-card__arrow {
+	margin-left: auto;
+	color: #a4bab5;
+	font-size: 1.05rem;
+	transition: color 170ms ease, transform 170ms ease;
+}
+
+.home-module-card:hover .home-module-card__arrow {
+	transform: translate(2px, -2px);
+	color: #0b8b79;
+}
+
+.home-integrity {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 3rem;
+	padding: 1.25rem 1.5rem;
+	border: 1px solid #dbeee8;
+	border-radius: 17px;
+	background: linear-gradient(100deg, #eaf8f3, #f3fbf8);
+}
+
+.home-integrity__icon {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	flex: 0 0 42px;
+	place-items: center;
+	border-radius: 14px;
+	background: #d7f1e7;
+	color: #12866f;
+	font-size: 1.2rem;
+}
+
+.home-integrity > div {
+	flex: 1;
+}
+
+.home-integrity strong {
+	color: #28564f;
+	font-size: 0.88rem;
+}
+
+.home-integrity p {
+	margin: 0.25rem 0 0;
+	color: #718781;
+	font-size: 0.76rem;
+}
+
+.home-integrity > a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	color: #087e70;
+	font-size: 0.78rem;
+	font-weight: 750;
+	white-space: nowrap;
+}
+
+.home-footer {
+	display: flex;
+	min-height: 82px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	border-top: 1px solid rgba(22, 85, 78, 0.08);
+}
+
+.home-brand--footer .home-brand__text strong {
+	font-size: 0.83rem;
+}
+
+.home-brand--footer .home-brand__text span,
+.home-footer > p {
+	color: #879896;
+	font-size: 0.69rem;
+}
+
+.home-footer > p {
+	margin: 0;
+}
+
+.home-page a:focus-visible {
+	outline: 3px solid #51b9a5;
+	outline-offset: 3px;
+}
+
+@media (max-width: 850px) {
+	.home-header,
+	.home-main,
+	.home-footer {
+		width: min(100% - 2rem, 700px);
+	}
+
+	.home-header {
+		flex-wrap: wrap;
+		padding-block: 1rem;
+	}
+
+	.home-nav {
+		order: 3;
+		width: 100%;
+		justify-content: center;
+		padding-top: 0.4rem;
+	}
+
+	.home-hero {
+		min-height: 0;
+		grid-template-columns: 1fr 0.8fr;
+		gap: 1rem;
+		padding-block: 3rem 2rem;
+	}
+
+	.home-hero__visual {
+		min-height: 280px;
+	}
+
+	.home-visual-card {
+		padding: 1.25rem;
+	}
+
+	.home-orbit {
+		width: 290px;
+	}
+
+	.home-module-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	.home-header,
+	.home-main,
+	.home-footer {
+		width: calc(100% - 2rem);
+	}
+
+	.home-header {
+		gap: 0.75rem;
+	}
+
+	.home-header__action {
+		min-height: 40px;
+		padding-inline: 0.75rem;
+		font-size: 0.75rem;
+	}
+
+	.home-nav {
+		justify-content: space-between;
+		gap: 0.5rem;
+	}
+
+	.home-nav__link {
+		font-size: 0.75rem;
+	}
+
+	.home-hero {
+		grid-template-columns: 1fr;
+		gap: 0.5rem;
+		padding-top: 2.5rem;
+	}
+
+	.home-hero h1 {
+		font-size: clamp(2.4rem, 11vw, 3.25rem);
+	}
+
+	.home-hero__description {
+		font-size: 0.93rem;
+	}
+
+	.home-hero__visual {
+		min-height: 300px;
+		margin-top: 0.25rem;
+	}
+
+	.home-visual-card {
+		width: min(330px, 84%);
+	}
+
+	.home-section-heading h2 {
+		font-size: 1.45rem;
+	}
+
+	.home-section-heading__hint {
+		display: none;
+	}
+
+	.home-module-grid {
+		grid-template-columns: 1fr;
+		gap: 0.65rem;
+	}
+
+	.home-module-card {
+		min-height: 88px;
+	}
+
+	.home-integrity {
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 1rem;
+	}
+
+	.home-integrity > div {
+		flex-basis: calc(100% - 60px);
+	}
+
+	.home-integrity > a {
+		margin-left: 3.5rem;
+	}
+
+	.home-footer {
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: center;
+		padding-block: 1.1rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.home-page *,
+	.home-page *::before,
+	.home-page *::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+.paciente-titulo{
+    color: var(--color-primary-dark);
+}
+.paciente-titulo{
+    color: var(--color-primary-dark);
+}
+.profissionais-titulo{
+    color: var(--color-primary-dark);
+}
+.profissionais-titulo{
+    color: var(--color-primary-dark);
+}
+.quarto-titulo{
+    color: var(--color-primary-dark);
+}
+.quarto-titulo{
+    color: var(--color-primary-dark);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+@import url(base.css);
+
+/* variaveis */
+@import url(var.css);
+
+/* estruturas-base */
+@import url(estruturas-base/footer.css);
+@import url(estruturas-base/header.css);
+@import url(estruturas-base/main.css);
+@import url(estruturas-base/nav.css);
+@import url(estruturas-base/section.css);
+@import url(estruturas-base/sistema-interno.css);
+
+/* componentes */
+@import url(componentes/botao-base.css);
+@import url(componentes/card-base.css);
+:root{
+    --font-size-small:1rem;
+    --font-size-medium:2rem;
+    --font-size-large:3rem;
+    
+    /* teal */
+	--color-primary: #14b8a6;
+	--color-primary-dark: #0f766e;
+	--color-primary-light: #ccfbf1;
+
+    /* azul */
+
+	--color-secondary: #279af1;
+	--color-secondary-dark: #1871b5;
+	--color-secondary-light: #78bef4;
+
+    /* bÃ¡sicas + comuns */
+	--color-success: #16a34a;
+	--color-warning: #f59e0b;
+	--color-danger: #dc2626;
+	--color-info: #0ea5e9;
+
+	/* Pagina inicial do sistema */
+	--home-ink: #173b3b;
+	--home-muted: #718484;
+	--home-line: #e5efed;
+	--home-surface: #ffffff;
+	--home-background: #f4fbfa;
+
+	/* Sistema interno */
+	--app-ink: #173b3b;
+	--app-muted: #718484;
+	--app-line: #e5efed;
+	--app-primary: #087e70;
+	--app-background: #f4fbfa;
+
+
+
+
+}   
+export function criarCard(nome,imagemLink,info,botaoLink){
+
+    const container = document.createElement('div');
+    container.className = 'tts-card';
+    const titulo = document.createElement('h1');
+    titulo.className = 'tts-card__nome';
+    titulo.textContent = nome;
+    const imagem = document.createElement('img');
+    imagem.src = imagemLink;
+    imagem.className = 'tts-card__imagem';
+    const informacao = document.createElement('p');
+    informacao.textContent=info;
+    informacao.className='tts-card__info';
+    const botao = document.createElement('a');
+    botao.className = 'tts-card__botao tts-button--basic';
+    botao.href = botaoLink;
+    botao.textContent='Saiba Mais'
+
+
+    container.appendChild(imagem);
+    container.appendChild(titulo);
+    container.appendChild(informacao);
+    container.appendChild(botao);
+
+    return container
+}
+export function criarFooter(){
+
+    const footer = document.createElement('footer')
+    footer.classList.add('app-footer')
+    const link = document.createElement('a')
+    link.textContent='TungTung SaÃºde'
+    link.setAttribute('href','../index.html')
+    
+    footer.appendChild(link)
+
+    return footer
+
+}
+export function criarHeader(){    
+    const header = document.createElement('header');
+    header.classList.add('app-topbar');
+    const linkConteudo = document.createElement('a')
+    linkConteudo.href='#app-content'
+    linkConteudo.textContent='Pular para o conteÃºdo'
+    linkConteudo.classList.add('app-skip-link')
+    const linkMarca = document.createElement('a')
+    linkMarca.classList.add('app-brand')
+    linkMarca.href='../index.html'
+    const marcaSpan1=document.createElement('span')
+    marcaSpan1.classList.add('app-brand__mark')
+    marcaSpan1.setAttribute('aria-hidden','true');
+
+    const SVG_NS = 'http://www.w3.org/2000/svg'
+    const marcaSvg = document.createElementNS(SVG_NS,'svg')
+    marcaSvg.setAttribute('viewBox', '0 0 48 48')
+    marcaSvg.setAttribute('focusable', 'false')
+
+    const marcaPath = document.createElementNS(SVG_NS,'path')
+    marcaPath.setAttribute('d','M19 7h10v12h12v10H29v12H19V29H7V19h12z')
+    
+    marcaSvg.appendChild(marcaPath)
+    marcaSpan1.appendChild(marcaSvg)
+
+    const marcaSpan2 = document.createElement('span')
+    const forte = document.createElement('strong')
+    forte.textContent='TungTung SaÃºde'
+    const pequeno = document.createElement('small')
+    pequeno.textContent='GestÃ£o Hospitalar'
+
+    marcaSpan2.append(forte,pequeno)
+
+    linkMarca.append(marcaSpan1, marcaSpan2)
+
+    const nav = document.createElement('nav')
+    nav.classList.add('app-nav')
+    nav.setAttribute('aria-label','NavegaÃ§Ã£o principal')
+
+    const navLinkPaciente =  document.createElement('a')
+    navLinkPaciente.href='paciente.html'
+    navLinkPaciente.textContent='Pacientes'
+
+    const navLinkProfissional=document.createElement('a')
+    navLinkProfissional.href = 'profissional.html'
+    navLinkProfissional.textContent='Profissionais'
+
+    const navLinkConsulta = document.createElement('a')
+    navLinkConsulta.href='consulta.html'
+    navLinkConsulta.textContent='Consultas'
+    navLinkConsulta.setAttribute('aria-current','page')
+
+    const navLinkInternacao = document.createElement('a')
+    navLinkInternacao.href='internacao.html'
+    navLinkInternacao.textContent='InternaÃ§Ãµes'
+
+    const navLinkQuarto = document.createElement('a')
+    navLinkQuarto.href='quarto.html'
+    navLinkQuarto.textContent='Quartos'
+    
+    const navLinkHistorico = document.createElement('a')
+    navLinkHistorico.href='historico.html'
+    navLinkHistorico.textContent='Historico'
+
+    nav.append(navLinkPaciente,
+        navLinkProfissional,
+        navLinkConsulta,
+        navLinkInternacao,
+        navLinkQuarto,
+        navLinkHistorico
+    )
+
+    const home = document.createElement('a')
+    home.classList.add('app-home-link')
+    home.href='../index.html'
+    home.textContent='VisÃ£o geral'
+    const homeSpan = document.createElement('span')
+    homeSpan.setAttribute('aria-hidden','true')
+    homeSpan.textContent="â†—"
+    home.appendChild(homeSpan)
+
+    header.append(linkConteudo,linkMarca,nav,home)
+
+    return header
+
+}
+function pesquisarConsulta(consultaId,dados){
+const consulta = dados.consultas.find(element => element.id === consultaId);
+    if(!consulta){
+        return null;
+    }
+    const paciente = dados.pacientes.find(element => element.id === consulta.pacienteId);
+    const profissional = dados.profissionais.find(element => element.id === consulta.profissionalId);
+
+    if (!paciente || !profissional) {
+    console.warn(`Consulta ${consultaId} tem paciente/profissional invÃ¡lido`);
+    return null;
+    }
+    return{consulta,paciente,profissional}
+}
+function renderizarConsulta(consulta,paciente,profissional){
+    const container = document.createElement('div');
+    container.classList.add('consulta');
+    const nomePaciente=document.createElement('p');
+    nomePaciente.textContent=`Nome Paciente: "${paciente.nome}"`
+    nomePaciente.classList.add('consulta__texto');
+    const nomeProfissional=document.createElement('p');
+    nomeProfissional.textContent=`Nome Medico: "${profissional.nome}"`;
+    nomeProfissional.classList.add('consulta__texto');
+    const data=document.createElement('p');
+    data.textContent=`Data: "${consulta.data}"`;
+    data.classList.add('consulta__texto');
+    const motivo=document.createElement('p');
+    motivo.textContent=`Motivo: "${consulta.motivo}"`;
+    motivo.classList.add('consulta__texto');
+    const observacaoMedica=document.createElement('p');
+    observacaoMedica.textContent=`ObservaÃ§Ã£o MÃ©dica: "${consulta.observacaoMedica}"`;
+    observacaoMedica.classList.add('consulta__texto');
+    const button=document.createElement('a');
+    button.classList.add('tts-button--basic')
+    button.textContent="Saiba Mais"
+    button.href="#";
+    
+    container.append(nomePaciente,
+                            nomeProfissional,
+                            data,
+                            motivo,
+                            observacaoMedica,
+                            button
+                        );
+    return container;
+}
+
+
+async function main(dadosCaminho) {
+    const response= await fetch(dadosCaminho);
+    const dados = await response.json();
+    const consulta = dados.consultas;
+
+    const container = document.querySelector('[data-type="consulta"]');
+    if(!container){
+        console.warn('Container [data-type="consulta"] nÃ£o encontrado')
+        return;
+    }
+    consulta.forEach(element => {
+        const resultado =pesquisarConsulta(element.id,dados)
+        if (!resultado) return;
+        const {consulta,paciente,profissional} = resultado;
+        const card = renderizarConsulta(consulta,paciente,profissional);
+        container.appendChild(card)
+        container.classList.add('consulta__container')
+    });
+}
+
+const dadosCaminho = '../assets/js/dados.json'
+main(dadosCaminho)
+import { criarCard } from "../componentes/card-base.js";
+
+const dadosCaminho = '../assets/js/dados.json'
+async function main(dadosCaminho) {
+    
+    const response = await fetch(dadosCaminho);
+    const dados =  await response.json();
+    const pacientes = dados.pacientes;
+    
+    const container = document.querySelector('[data-type="card"]')
+
+    if (!container) {
+    console.warn('Container [data-type="card"] nÃ£o encontrado');
+    return;
+    }
+    pacientes.forEach(element => {
+        const card = criarCard(
+        element.nome,
+        element.imagem,
+        element.info,
+        "",
+        );
+    container.appendChild(card);
+});
+container.classList.add('tts-card__container')
+}
+
+main(dadosCaminho);
+import { criarCard } from "../componentes/card-base.js";
+const dadosCaminho = '../assets/js/dados.json'
+async function main(dadosCaminho) {
+    
+    const response = await fetch(dadosCaminho);
+    const dados =  await response.json();
+    const profissionais = dados.profissionais;
+    
+    const container = document.querySelector('[data-type="card"]')
+
+    if (!container) {
+    console.warn('Container [data-type="card"] nÃ£o encontrado');
+    return;
+    }
+    
+    profissionais.forEach(element => {
+        const card = criarCard(
+        element.nome,
+        element.imagem,
+        element.info,
+        "",
+        );
+    container.appendChild(card);
+});
+container.classList.add('tts-card__container');
+}
+
+main(dadosCaminho);
+import { criarCard } from "../componentes/card-base.js";
+const dadosCaminho = '../assets/js/dados.json'
+async function main(dadosCaminho) {
+    
+    const response = await fetch(dadosCaminho);
+    const dados =  await response.json();
+    const quartos = dados.quartos;
+    
+    const container = document.querySelector('[data-type="card"]')
+
+    if (!container) {
+    console.warn('Container [data-type="card"] nÃ£o encontrado');
+    return;
+    }
+    
+    quartos.forEach(element => {
+        const card = criarCard(
+        element.nome,
+        element.imagem,
+        element.info,
+        "",
+        );
+    container.appendChild(card);
+});
+container.classList.add('tts-card__container');
+}
+
+main(dadosCaminho);
+{
+    "pacientes": [
+
+        {   
+            "id":"IWK3MFG",
+            "nome":"Julio Cesar",
+            "imagem":"https://randomuser.me/api/portraits/men/1.jpg",
+            "info":"18 anos, gÃªnero masculino"
+        },
+        {
+            "id":"P1L4KGN",
+            "nome":"Carla Viana",
+            "imagem":"https://randomuser.me/api/portraits/women/1.jpg",
+            "info":"21 anos, gÃªnero feminino"
+
+        }
+    ],
+    "profissionais":[
+        {
+            "id":"OI2034R",
+            "nome":"Augusto Silva Santos",
+        "imagem":"https://randomuser.me/api/portraits/men/34.jpg",
+        "info":"34 anos, otorrinolaringologista"
+        },
+        {   "id":"OI3023K",
+            "nome":"Josiane Ferreira Cardoso",
+            "imagem":"https://randomuser.me/api/portraits/women/67.jpg",
+            "info":"27 anos, neurologista"
+        }    
+        
+    ],
+    "quartos":[
+        {
+            "id":"JAKAOQR",
+            "nome":"Quarto 212",
+            "imagem":"https://hospitaliamada.com.br/system/uploads/2025/03/acomodacoes/imagens/left-image-suites-e-apartamentos-especiais76141741805741.webp",
+            "info":"Quarto disponÃ­vel, lotaÃ§Ã£o 5 pessoas, mÃ¡ximo 10 pessoas"
+        },
+        {
+            "id":"IJGIPAT",
+            "nome":"Quarto 101",
+            "imagem":"https://itapira.sp.gov.br/fotos/170872016665d90026c1853703920432.jpg",
+            "info":"Quarto indisponÃ­vel, lotaÃ§Ã£o 10 pessoas, mÃ¡ximo 10 pessoas"
+        }
+    ],
+    "consultas":[
+        {
+        "id":"O1P4KSDL",
+        "pacienteId":"IWK3MFG",
+        "profissionalId":"OI2034R",
+        "data":"11/09/2026",
+        "motivo":"Surdez momentÃ¢nea",
+        "observacaoMedica":"SituaÃ§Ã£o grave, necessÃ¡rio a amputaÃ§Ã£o do membro"
+    },
+    {
+        "id":"Q01OEJKS",
+        "pacienteId":"P1L4KGN",
+        "profissionalId":"OI3023K",
+        "motivo":"Dor de cabeÃ§a",
+        "observacaoMedica":"SituaÃ§Ã£o leve, apenas necessÃ¡rio medicamento para dores de cabeÃ§a"
+    }
+    ]
+}
+// Importa todos os js do sistema, menos o de cada pÃ¡gina
+
+import { criarHeader } from "./componentes/header-base.js";
+import { criarFooter } from "./componentes/footer-base.js";
+const componentes = {
+    "header-base":criarHeader,
+    "footer-base":criarFooter
+    // Outros componentes, utilizar data-componente
+
+};
+    
+function injetarComponentes(){
+document.querySelectorAll('[data-componente]').forEach(elemento =>{
+    const nome = elemento.dataset.componente;
+    const fabrica = componentes[nome];
+
+    if (!fabrica){
+        console.warn(`Componente "${nome}"nÃ£o registrado`);
+        return;
+    }
+    elemento.appendChild(fabrica());
+});
+}
+injetarComponentes();
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Consultas | TungTung SaÃºde</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js"></script>
+
+</head>
+<body class="hospital-page">
+    
+<div data-componente="header-base"></div>
+
+
+
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃƒO HOSPITALAR</p><h1>Consultas</h1><p class="app-heading__description">Agendamentos vinculados a pacientes e profissionais responsÃ¡veis.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Nova consulta</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">â“˜</span><span>Organize os agendamentos e atendimentos da equipe de saÃºde.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="consultation-list-title">
+                <div class="app-toolbar"><div><h2>Consultas cadastradas</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">âŒ•</span><span class="visually-hidden">Buscar consulta</span><input type="search" aria-label="Busca de consultas"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">âŒ•</span><strong>Nenhuma consulta cadastrada</strong><p>As consultas cadastradas serÃ£o listadas nesta Ã¡rea.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="consultation-form-title">
+                <div class="app-toolbar"><div><h2 id="consultation-form-title">Agendar consulta</h2><p class="app-record-count">Selecione paciente, profissional e horÃ¡rio</p></div></div>
+                <form class="app-form app-form--plain" aria-label="FormulÃ¡rio de consulta">
+                    <div class="app-form__fields">
+                        <div class="app-field"><label for="consultation-patient">Paciente <span aria-hidden="true">*</span></label><select id="consultation-patient" name="patient" required><option value="" selected>Selecione um paciente</option></select></div>
+                        <div class="app-field"><label for="consultation-professional">Profissional responsÃ¡vel <span aria-hidden="true">*</span></label><select id="consultation-professional" name="professional" required><option value="" selected>Selecione um profissional</option></select></div>
+                        <div class="app-field"><label for="consultation-date">Data <span aria-hidden="true">*</span></label><input id="consultation-date" name="date" type="date" required></div>
+                        <div class="app-field"><label for="consultation-time">HorÃ¡rio <span aria-hidden="true">*</span></label><input id="consultation-time" name="time" type="time" required></div>
+                        <div class="app-field app-field--wide"><label for="consultation-reason">Motivo da consulta <span aria-hidden="true">*</span></label><textarea id="consultation-reason" name="reason" rows="2" required></textarea></div>
+                        <div class="app-field app-field--wide"><label for="consultation-notes">ObservaÃ§Ãµes mÃ©dicas</label><textarea id="consultation-notes" name="notes" rows="2"></textarea></div>
+                        <div class="app-field"><label for="consultation-status">SituaÃ§Ã£o</label><select id="consultation-status" name="status"><option>Agendada</option><option>Realizada</option><option>Cancelada</option></select></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatÃ³rios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar consulta</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+
+    <div data-componente="footer-base">
+    </div>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/consulta.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/consultas.js"></script>
+</head>
+<body>
+    <div data-componente="header-base"></div>
+    <main>
+        <h1 class="consulta__titulo">Consultas</h1>
+        <div data-type="consulta"></div>
+    
+    </main>
+    <div data-componente="footer-base"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <title>HistÃ³rico mÃ©dico | TungTung SaÃºde</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js"></script>
+</head>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteÃºdo</a>
+    
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃƒO HOSPITALAR</p><h1>HistÃ³rico mÃ©dico</h1><p class="app-heading__description">Consultas realizadas, internaÃ§Ãµes concluÃ­das e registros dos atendimentos.</p></div></div>
+        <div class="app-info-notice"><span aria-hidden="true">â“˜</span><span>Acompanhe os atendimentos e os registros relacionados a cada paciente.</span></div>
+        <section class="app-panel app-panel--history" aria-labelledby="history-list-title">
+            <div class="app-toolbar"><div><h2 id="history-list-title">Registros de atendimento</h2><p class="app-record-count">Nenhum registro encontrado</p></div><div class="app-filters"><label class="app-filter-select"><span class="visually-hidden">Filtrar por paciente</span><select aria-label="Filtrar por paciente"><option>Todos os pacientes</option></select></label><label class="app-search"><span aria-hidden="true">âŒ•</span><span class="visually-hidden">Buscar no histÃ³rico</span><input type="search" aria-label="Busca no histÃ³rico"></label></div></div>
+            <div class="app-table-wrap"><table class="app-table"><thead><tr><th scope="col">Data</th><th scope="col">Tipo</th><th scope="col">Paciente</th><th scope="col">Profissional</th><th scope="col">Resumo</th></tr></thead><tbody><tr><td class="app-table__empty" colspan="5">Nenhum atendimento no histÃ³rico.</td></tr></tbody></table></div>
+        </section>
+    </main>
+
+    <footer data-componente="footer-base"></footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/historico.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/historicos.js"></script>
+</head>
+<body>
+    <div data-component="header-base"></div>
+    <main></main>
+    <div data-component="footer-base"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <title>InternaÃ§Ãµes | TungTung SaÃºde</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js"></script>
+</head>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteÃºdo</a>
+
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃƒO HOSPITALAR</p><h1>InternaÃ§Ãµes</h1><p class="app-heading__description">Entradas, ocupaÃ§Ã£o de quartos e acompanhamento de altas.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Nova internaÃ§Ã£o</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">â“˜</span><span>Acompanhe a ocupaÃ§Ã£o dos quartos e as datas de alta.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="admission-list-title">
+                <div class="app-toolbar"><div><h2 id="admission-list-title">InternaÃ§Ãµes cadastradas</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">âŒ•</span><span class="visually-hidden">Buscar internaÃ§Ã£o</span><input type="search" aria-label="Busca de internaÃ§Ãµes"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">âŒ•</span><strong>Nenhuma internaÃ§Ã£o cadastrada</strong><p>As internaÃ§Ãµes cadastradas serÃ£o listadas nesta Ã¡rea.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="admission-form-title">
+                <div class="app-toolbar"><div><h2 id="admission-form-title">Registrar internaÃ§Ã£o</h2><p class="app-record-count">Vincule o paciente, o profissional e o quarto</p></div></div>
+                <form class="app-form app-form--plain" aria-label="FormulÃ¡rio de internaÃ§Ã£o">
+                    <div class="app-form__fields">
+                        <div class="app-field"><label for="admission-patient">Paciente <span aria-hidden="true">*</span></label><select id="admission-patient" name="patient" required><option value="" selected>Selecione um paciente</option></select></div>
+                        <div class="app-field"><label for="admission-professional">Profissional responsÃ¡vel <span aria-hidden="true">*</span></label><select id="admission-professional" name="professional" required><option value="" selected>Selecione um profissional</option></select></div>
+                        <div class="app-field"><label for="admission-room">Quarto <span aria-hidden="true">*</span></label><select id="admission-room" name="room" required><option value="" selected>Selecione um quarto</option></select></div>
+                        <div class="app-field"><label for="admission-companion">Acompanhante</label><input id="admission-companion" name="companion"></div>
+                        <div class="app-field"><label for="admission-entry">Data de entrada <span aria-hidden="true">*</span></label><input id="admission-entry" name="entryDate" type="date" required></div>
+                        <div class="app-field"><label for="admission-time">HorÃ¡rio</label><input id="admission-time" name="time" type="time"></div>
+                        <div class="app-field"><label for="admission-expected">Data prevista de alta <span aria-hidden="true">*</span></label><input id="admission-expected" name="expectedDischarge" type="date" required></div>
+                        <div class="app-field"><label for="admission-discharge">Data efetiva de alta</label><input id="admission-discharge" name="dischargeDate" type="date"></div>
+                        <div class="app-field app-field--wide"><label for="admission-notes">ObservaÃ§Ãµes mÃ©dicas</label><textarea id="admission-notes" name="notes" rows="2"></textarea></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatÃ³rios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar internaÃ§Ã£o</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div data-componente="footer-base"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/internacao.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/internacoes.js"></script>
+</head>
+<body>
+    <div data-component="header-base"></div>
+    <main></main>
+    <div data-component="footer-base"></div>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Pacientes | TungTung SaÃºde</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js"></script>
+</head>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteÃºdo</a>
+
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃƒO HOSPITALAR</p><h1>Pacientes</h1><p class="app-heading__description">Dados cadastrais e de contato dos pacientes.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Novo paciente</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">â“˜</span><span>Consulte os dados cadastrais e de contato dos pacientes.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="patient-list-title">
+                <div class="app-toolbar"><div><h2 id="patient-list-title">Pacientes cadastrados</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">âŒ•</span><span class="visually-hidden">Buscar paciente</span><input type="search" aria-label="Busca de pacientes"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">âŒ•</span><strong>Nenhum paciente cadastrado</strong><p>Os pacientes cadastrados serÃ£o listados nesta Ã¡rea.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="patient-form-title">
+                <div class="app-toolbar"><div><h2 id="patient-form-title">Cadastro de paciente</h2><p class="app-record-count">Campos previstos no escopo do sistema</p></div></div>
+                <form class="app-form app-form--plain" aria-label="FormulÃ¡rio de paciente">
+                    <div class="app-form__fields">
+                        <div class="app-field app-field--wide"><label for="patient-name">Nome completo <span aria-hidden="true">*</span></label><input id="patient-name" name="name" required></div>
+                        <div class="app-field"><label for="patient-cpf">CPF <span aria-hidden="true">*</span></label><input id="patient-cpf" name="cpf" placeholder="000.000.000-00" required></div>
+                        <div class="app-field"><label for="patient-birth">Data de nascimento <span aria-hidden="true">*</span></label><input id="patient-birth" name="birthDate" type="date" required></div>
+                        <div class="app-field"><label for="patient-phone">Telefone <span aria-hidden="true">*</span></label><input id="patient-phone" name="phone" type="tel" required></div>
+                        <div class="app-field"><label for="patient-email">E-mail <span aria-hidden="true">*</span></label><input id="patient-email" name="email" type="email" required></div>
+                        <div class="app-field app-field--wide"><label for="patient-address">EndereÃ§o <span aria-hidden="true">*</span></label><textarea id="patient-address" name="address" rows="2" required></textarea></div>
+                        <div class="app-field app-field--wide"><label for="patient-companion">Acompanhante</label><input id="patient-companion" name="companion"></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatÃ³rios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar paciente</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div data-componente="footer-base"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/paciente.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/pacientes.js"></script>
+</head>
+<body>
+    <div data-componente="header-base"></div>
+    <main>
+        <h1 class="paciente-titulo">Pacientes</h1>
+        <div data-type="card"></div>
+    </main>
+    <div data-componente="footer-base"></div>
+
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/profissional.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/profissionais.js"></script>
+</head>
+<body>
+    <div data-componente="header-base"></div>
+    <main>
+        <h1 class="profissionais-titulo"> Profissionais</h1>
+        <div data-type="card"></div>
+    </main>
+    <div data-componente="footer-base"></div>
+
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Profissionais | TungTung SaÃºde</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js"></script>
+</head>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteÃºdo</a>
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃƒO HOSPITALAR</p><h1>Profissionais</h1><p class="app-heading__description">InformaÃ§Ãµes da equipe de profissionais da saÃºde.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Novo profissional</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">â“˜</span><span>Consulte os dados e as especialidades dos profissionais da equipe.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="professional-list-title">
+                <div class="app-toolbar"><div><h2 id="professional-list-title">Profissionais cadastrados</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">âŒ•</span><span class="visually-hidden">Buscar profissional</span><input type="search" aria-label="Busca de profissionais"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">âŒ•</span><strong>Nenhum profissional cadastrado</strong><p>Os profissionais cadastrados serÃ£o listados nesta Ã¡rea.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="professional-form-title">
+                <div class="app-toolbar"><div><h2 id="professional-form-title">Cadastro de profissional</h2><p class="app-record-count">Campos previstos no escopo do sistema</p></div></div>
+                <form class="app-form app-form--plain" aria-label="FormulÃ¡rio de profissional">
+                    <div class="app-form__fields">
+                        <div class="app-field app-field--wide"><label for="professional-name">Nome completo <span aria-hidden="true">*</span></label><input id="professional-name" name="name" required></div>
+                        <div class="app-field app-field--wide"><label for="professional-registry">Registro profissional <span aria-hidden="true">*</span></label><input id="professional-registry" name="registry" placeholder="Ex.: CRM-MG 000000" required></div>
+                        <div class="app-field app-field--wide"><label for="professional-specialty">Especialidade <span aria-hidden="true">*</span></label><input id="professional-specialty" name="specialty" required></div>
+                        <div class="app-field"><label for="professional-phone">Telefone <span aria-hidden="true">*</span></label><input id="professional-phone" name="phone" type="tel" required></div>
+                        <div class="app-field"><label for="professional-email">E-mail <span aria-hidden="true">*</span></label><input id="professional-email" name="email" type="email" required></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatÃ³rios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar profissional</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div data-componente="footer-base"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <title>Quartos | TungTung SaÃºde</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js"></script>
+</head>
+<body class="hospital-page">
+    <a class="app-skip-link" href="#app-content">Pular para o conteÃºdo</a>
+    <div data-componente="header-base"></div>
+    <main id="app-content" class="app-main">
+        <div class="app-heading"><div><p class="app-eyebrow">GESTÃƒO HOSPITALAR</p><h1>Quartos</h1><p class="app-heading__description">Capacidade e situaÃ§Ã£o atual dos quartos hospitalares.</p></div><a class="app-button app-button--primary" href="#cadastro">+ Novo quarto</a></div>
+        <div class="app-info-notice"><span aria-hidden="true">â“˜</span><span>Confira a capacidade e a disponibilidade dos quartos hospitalares.</span></div>
+        <div class="app-content-grid">
+            <section class="app-panel" aria-labelledby="room-list-title">
+                <div class="app-toolbar"><div><h2 id="room-list-title">Quartos cadastrados</h2><p class="app-record-count">Nenhum registro encontrado</p></div><label class="app-search"><span aria-hidden="true">âŒ•</span><span class="visually-hidden">Buscar quarto</span><input type="search" aria-label="Busca de quartos"></label></div>
+                <div class="app-empty"><span class="app-empty__icon" aria-hidden="true">âŒ•</span><strong>Nenhum quarto cadastrado</strong><p>Os quartos cadastrados serÃ£o listados nesta Ã¡rea.</p></div>
+            </section>
+            <section id="cadastro" class="app-panel" aria-labelledby="room-form-title">
+                <div class="app-toolbar"><div><h2 id="room-form-title">Cadastro de quarto</h2><p class="app-record-count">Informe a capacidade mÃ¡xima permitida</p></div></div>
+                <form class="app-form app-form--plain" aria-label="FormulÃ¡rio de quarto">
+                    <div class="app-form__fields">
+                        <div class="app-field"><label for="room-number">NÃºmero de identificaÃ§Ã£o <span aria-hidden="true">*</span></label><input id="room-number" name="number" required></div>
+                        <div class="app-field"><label for="room-floor">Andar <span aria-hidden="true">*</span></label><input id="room-floor" name="floor" required></div>
+                        <div class="app-field"><label for="room-capacity">Capacidade mÃ¡xima de pacientes <span aria-hidden="true">*</span></label><input id="room-capacity" name="capacity" type="number" min="1" step="1" required></div>
+                        <div class="app-field"><label for="room-status">SituaÃ§Ã£o atual</label><select id="room-status" name="status"><option>DisponÃ­vel</option><option>Ocupado</option></select></div>
+                    </div>
+                    <p class="app-form-hint">* Campos obrigatÃ³rios.</p>
+                    <div class="app-form__actions"><button class="app-button app-button--secondary" type="reset">Limpar</button><button class="app-button app-button--primary" type="button" disabled>Salvar quarto</button></div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div data-componente="footer-base"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/quarto.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/quartos.js"></script>
+</head>
+<body>
+    <div data-componente="header-base"></div>
+    <main>
+        <h1 class="quarto-titulo">
+            Quartos
+        </h1>
+        <div data-type="card"></div>
+    </main>
+    <div data-componente="footer-base"></div>
+
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4fbfa">
+    <meta name="description" content="TungTung SaÃºde: sistema de informaÃ§Ã£o para organizar pacientes, profissionais, consultas, internaÃ§Ãµes e quartos hospitalares.">
+    <title>TungTung SaÃºde | GestÃ£o hospitalar</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/pages/index.css">
+</head>
+<body class="home-page">
+    <a class="home-skip-link" href="#conteudo">Pular para o conteÃºdo</a>
+
+    <header class="home-header">
+        <a class="home-brand" href="./index.html" aria-label="TungTung SaÃºde â€” pÃ¡gina inicial">
+            <span class="home-brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                    <path d="M19 7h10v12h12v10H29v12H19V29H7V19h12z" />
+                </svg>
+            </span>
+            <span class="home-brand__text">
+                <strong>TungTung SaÃºde</strong>
+                <span>GestÃ£o hospitalar</span>
+            </span>
+        </a>
+
+        <nav class="home-nav" aria-label="NavegaÃ§Ã£o principal">
+            <a class="home-nav__link home-nav__link--active" href="#inicio" aria-current="page">InÃ­cio</a>
+            <a class="home-nav__link" href="#modulos">MÃ³dulos</a>
+            <a class="home-nav__link" href="./pages/historico.html">HistÃ³rico mÃ©dico</a>
+        </nav>
+
+        <a class="home-header__action" href="./pages/consulta.html">
+            <span aria-hidden="true">+</span> Nova consulta
+        </a>
+    </header>
+
+    <main id="conteudo" class="home-main">
+        <section id="inicio" class="home-hero" aria-labelledby="home-title">
+            <div class="home-hero__content">
+                <p class="home-eyebrow"><span></span> SISTEMA DE INFORMAÃ‡ÃƒO HOSPITALAR</p>
+                <h1 id="home-title">Cuidado organizado.<br><span>GestÃ£o mais eficiente.</span></h1>
+                <p class="home-hero__description">
+                    Centralize as informaÃ§Ãµes do hospital e encontre, em um sÃ³ lugar.
+                </p>
+                <div class="home-hero__actions">
+                    <a class="home-button home-button--primary" href="#modulos">
+                        Explorar mÃ³dulos <span aria-hidden="true">â†’</span>
+                    </a>
+                    <a class="home-button home-button--secondary" href="./pages/consulta.html">Acessar consultas</a>
+                </div>
+                <div class="home-hero__note">
+                    <span class="home-hero__note-icon" aria-hidden="true">âœ“</span>
+                    <p><strong>InformaÃ§Ãµes conectadas</strong><br>Pacientes, profissionais e atendimentos. Tudo em um sÃ³ lugar</p>
+                </div>
+            </div>
+
+            <div class="home-hero__visual" aria-label="VisÃ£o geral dos recursos do sistema">
+                <div class="home-orbit home-orbit--outer"></div>
+                <div class="home-orbit home-orbit--inner"></div>
+                <div class="home-visual-card">
+                    <div class="home-visual-card__top">
+                        <span class="home-visual-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-1 12-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z" /></svg>
+                        </span>
+                        <span class="home-visual-card__tag">Cuidado integrado</span>
+                    </div>
+                    <h2>Uma visÃ£o completa<br>do atendimento</h2>
+                    <p>Do cadastro ao histÃ³rico do paciente, com os recursos hospitalares organizados.</p>
+                    <div class="home-visual-card__flow" aria-hidden="true">
+                        <span>Paciente</span><i></i><span>Atendimento</span><i></i><span>HistÃ³rico</span>
+                    </div>
+                </div>
+                <span class="home-floating home-floating--top" aria-hidden="true">+</span>
+                <span class="home-floating home-floating--bottom" aria-hidden="true">âœ“</span>
+            </div>
+        </section>
+
+        <section id="modulos" class="home-modules" aria-labelledby="modules-title">
+            <div class="home-section-heading">
+                <div>
+                    <p class="home-eyebrow">RECURSOS DO SISTEMA</p>
+                    <h2 id="modules-title">Acesse os mÃ³dulos</h2>
+                    <p>Encontre as Ã¡reas principais da gestÃ£o hospitalar.</p>
+                </div>
+                <span class="home-section-heading__hint">6 mÃ³dulos</span>
+            </div>
+
+            <div class="home-module-grid">
+                <a class="home-module-card" href="./pages/paciente.html">
+                    <span class="home-module-card__icon home-module-card__icon--teal" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Pacientes</strong><span>Cadastros e dados de contato</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">â†—</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/profissional.html">
+                    <span class="home-module-card__icon home-module-card__icon--blue" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2a5 5 0 0 0-5 5v2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5Zm-3 7V7a3 3 0 0 1 6 0v2H9Zm2 3h2v2h2v2h-2v2h-2v-2H9v-2h2v-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Profissionais</strong><span>Equipe, registro e especialidade</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">â†—</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/consulta.html">
+                    <span class="home-module-card__icon home-module-card__icon--purple" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V2Zm13 8H4v10h16V10ZM6 13h5v2H6v-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Consultas</strong><span>Agendamentos e atendimentos</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">â†—</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/internacao.html">
+                    <span class="home-module-card__icon home-module-card__icon--orange" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M3 5h2v9h14V9a2 2 0 0 1 2 2v8h-2v-3H5v3H3V5Zm4 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm5 1h5a2 2 0 0 1 2 2v2h-9v-2a2 2 0 0 1 2-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>InternaÃ§Ãµes</strong><span>Entradas, quartos e altas</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">â†—</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/quarto.html">
+                    <span class="home-module-card__icon home-module-card__icon--green" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M4 3h16a2 2 0 0 1 2 2v16h-2v-2H4v2H2V5a2 2 0 0 1 2-2Zm0 14h16V5H4v12Zm2-10h5v5H6V7Zm7 0h5v2h-5V7Zm0 4h5v2h-5v-2Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>Quartos</strong><span>Capacidade e disponibilidade</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">â†—</span>
+                </a>
+
+                <a class="home-module-card" href="./pages/historico.html">
+                    <span class="home-module-card__icon home-module-card__icon--pink" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3a9 9 0 1 1-8.5 6H1l4-4 4 4H5.6A7 7 0 1 0 12 5V3Zm-1 4h2v5l3 1.8-1 1.7-4-2.5V7Z" /></svg>
+                    </span>
+                    <span class="home-module-card__body"><strong>HistÃ³rico mÃ©dico</strong><span>Consultas e internaÃ§Ãµes anteriores</span></span>
+                    <span class="home-module-card__arrow" aria-hidden="true">â†—</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-integrity" aria-label="OrganizaÃ§Ã£o do atendimento">
+            <span class="home-integrity__icon" aria-hidden="true">âœš</span>
+            <div>
+                <strong>InformaÃ§Ã£o organizada para decisÃµes melhores</strong>
+                <p>Consulte registros relacionados e acompanhe a disponibilidade de profissionais e quartos.</p>
+            </div>
+            <a href="./pages/historico.html">Ver histÃ³rico <span aria-hidden="true">â†’</span></a>
+        </section>
+    </main>
+
+    <footer class="app-footer"><a href="../index.html">TungTung SaÃºde</a></footer>
+</body>
+</body>
+</html>
+# GP_5_TungTung-Saude
+
+Consulta:
+Motivo_da_Consulta: string
+id_medico: string
+id_paciente: string
+ObservÃ§Ã£o_Medicas: string
+----------------------------
+Agendamento(): void --cria objeto consulta
+ 
+
+InternaÃ§Ã£o:
+id_quarto: string
+id_medico: string
+id_paciente: string
+acompanhante: string
+horÃ¡rio: date
+data_entrada: date
+data prevista: date
+data efetiva: date
+ObservÃ§Ã£o_Medicas: string
+
+
+Profissional:
+id_medico: string
+Nome: string
+especialidade: string
+Telefone: string
+E-mail: string
+
+
+Paciente:
+CPF: string
+Nome: string
+endereÃ§o: string
+Data_de_Nasc: Date
+Telefone: string
+acompanhante: string
+
+Quarto:
+Numero de identificaÃ§Ã£o
+Andar: 
+Capacidade_maxima_de_paciente: int
+Disponibilidade: Bool
+
+
+
+
+
+
+
+Agendamento:
+nome_paciente: string
+numero_paciente: string
+numero_convenio: string
+
+
+```
+GP_5_TungTung-Saude
+â”œâ”€ backend
+â”œâ”€ frontend
+â”‚  â”œâ”€ assets
+â”‚  â”‚  â”œâ”€ css
+â”‚  â”‚  â”‚  â”œâ”€ componentes
+â”‚  â”‚  â”‚  â”‚  â””â”€ header-base.css
+â”‚  â”‚  â”‚  â”œâ”€ estruturas-base
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ footer.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ header.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ main.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ nav.css
+â”‚  â”‚  â”‚  â”‚  â””â”€ section.css
+â”‚  â”‚  â”‚  â”œâ”€ paginas
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ consulta.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ historico.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ internacao.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ paciente.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ profissional.css
+â”‚  â”‚  â”‚  â”‚  â””â”€ quarto.css
+â”‚  â”‚  â”‚  â”œâ”€ reset.css
+â”‚  â”‚  â”‚  â”œâ”€ style.css
+â”‚  â”‚  â”‚  â””â”€ var.css
+â”‚  â”‚  â”œâ”€ img
+â”‚  â”‚  â””â”€ js
+â”‚  â”‚     â”œâ”€ componentes
+â”‚  â”‚     â”‚  â”œâ”€ botao-base.js
+â”‚  â”‚     â”‚  â””â”€ header-base.js
+â”‚  â”‚     â”œâ”€ dados.js
+â”‚  â”‚     â”œâ”€ estruturas-base
+â”‚  â”‚     â”‚  â”œâ”€ footer.js
+â”‚  â”‚     â”‚  â”œâ”€ header.js
+â”‚  â”‚     â”‚  â”œâ”€ main.js
+â”‚  â”‚     â”‚  â””â”€ nav.js
+â”‚  â”‚     â”œâ”€ paginas
+â”‚  â”‚     â”‚  â”œâ”€ historico.js
+â”‚  â”‚     â”‚  â”œâ”€ internacao.js
+â”‚  â”‚     â”‚  â”œâ”€ paciente.js
+â”‚  â”‚     â”‚  â”œâ”€ profissional.js
+â”‚  â”‚     â”‚  â””â”€ quarto.js
+â”‚  â”‚     â””â”€ script.js
+â”‚  â”œâ”€ index.html
+â”‚  â””â”€ pages
+â”‚     â”œâ”€ historico.html
+â”‚     â”œâ”€ internacao.html
+â”‚     â”œâ”€ paciente.html
+â”‚     â”œâ”€ profissional.html
+â”‚     â””â”€ quarto.html
+â””â”€ README.md
+
+```
+# GP_5_TungTung-Saude
+
+Consulta:
+Motivo_da_Consulta: string
+id_medico: string
+id_paciente: string
+ObservÃ§Ã£o_Medicas: string
+----------------------------
+Agendamento(): void --cria objeto consulta
+ 
+
+InternaÃ§Ã£o:
+id_quarto: string
+id_medico: string
+id_paciente: string
+acompanhante: string
+horÃ¡rio: date
+data_entrada: date
+data prevista: date
+data efetiva: date
+ObservÃ§Ã£o_Medicas: string
+
+
+Profissional:
+id_medico: string
+Nome: string
+especialidade: string
+Telefone: string
+E-mail: string
+
+
+Paciente:
+CPF: string
+Nome: string
+endereÃ§o: string
+Data_de_Nasc: Date
+Telefone: string
+acompanhante: string
+
+Quarto:
+Numero de identificaÃ§Ã£o
+Andar: 
+Capacidade_maxima_de_paciente: int
+Disponibilidade: Bool
+
+
+
+
+
+
+
+Agendamento:
+nome_paciente: string
+numero_paciente: string
+numero_convenio: string
+
+
+```
+GP_5_TungTung-Saude
+â”œâ”€ backend
+â”œâ”€ frontend
+â”‚  â”œâ”€ assets
+â”‚  â”‚  â”œâ”€ css
+â”‚  â”‚  â”‚  â”œâ”€ componentes
+â”‚  â”‚  â”‚  â”‚  â””â”€ header-base.css
+â”‚  â”‚  â”‚  â”œâ”€ estruturas-base
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ footer.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ header.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ main.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ nav.css
+â”‚  â”‚  â”‚  â”‚  â””â”€ section.css
+â”‚  â”‚  â”‚  â”œâ”€ paginas
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ consulta.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ historico.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ internacao.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ paciente.css
+â”‚  â”‚  â”‚  â”‚  â”œâ”€ profissional.css
+â”‚  â”‚  â”‚  â”‚  â””â”€ quarto.css
+â”‚  â”‚  â”‚  â”œâ”€ reset.css
+â”‚  â”‚  â”‚  â”œâ”€ style.css
+â”‚  â”‚  â”‚  â””â”€ var.css
+â”‚  â”‚  â”œâ”€ img
+â”‚  â”‚  â””â”€ js
+â”‚  â”‚     â”œâ”€ componentes
+â”‚  â”‚     â”‚  â”œâ”€ botao-base.js
+â”‚  â”‚     â”‚  â””â”€ header-base.js
+â”‚  â”‚     â”œâ”€ dados.js
+â”‚  â”‚     â”œâ”€ estruturas-base
+â”‚  â”‚     â”‚  â”œâ”€ footer.js
+â”‚  â”‚     â”‚  â”œâ”€ header.js
+â”‚  â”‚     â”‚  â”œâ”€ main.js
+â”‚  â”‚     â”‚  â””â”€ nav.js
+â”‚  â”‚     â”œâ”€ paginas
+â”‚  â”‚     â”‚  â”œâ”€ historico.js
+â”‚  â”‚     â”‚  â”œâ”€ internacao.js
+â”‚  â”‚     â”‚  â”œâ”€ paciente.js
+â”‚  â”‚     â”‚  â”œâ”€ profissional.js
+â”‚  â”‚     â”‚  â””â”€ quarto.js
+â”‚  â”‚     â””â”€ script.js
+â”‚  â”œâ”€ index.html
+â”‚  â””â”€ pages
+â”‚     â”œâ”€ historico.html
+â”‚     â”œâ”€ internacao.html
+â”‚     â”œâ”€ paciente.html
+â”‚     â”œâ”€ profissional.html
+â”‚     â””â”€ quarto.html
+â””â”€ README.md
+
+```

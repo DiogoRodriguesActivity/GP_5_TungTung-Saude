@@ -1,0 +1,17 @@
+/* reset */
+@import url(base.css);
+
+/* variaveis */
+@import url(var.css);
+
+/* estruturas-base */
+@import url(estruturas-base/footer.css);
+@import url(estruturas-base/header.css);
+@import url(estruturas-base/main.css);
+@import url(estruturas-base/nav.css);
+@import url(estruturas-base/section.css);
+@import url(estruturas-base/sistema-interno.css);
+
+/* componentes */
+@import url(componentes/botao-base.css);
+@import url(componentes/card-base.css);

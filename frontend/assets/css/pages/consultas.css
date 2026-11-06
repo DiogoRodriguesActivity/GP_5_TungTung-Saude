@@ -1,0 +1,33 @@
+.consulta{
+display: flex;
+width: fit-content;
+margin-left:1rem;
+flex-direction: column;
+background-color: var(--color-secondary);
+padding: 1rem;
+border-radius: 16px;
+max-width: 20rem;
+}
+.consulta__titulo{
+    color: var(--color-primary-dark);
+}
+.consulta__texto{
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp:3;
+    -webkit-box-orient: vertical;
+    text-overflow: hidden;
+}
+.consulta__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.consulta a{
+    font-size:1.3rem;
+    margin-top:auto;
+    justify-self: flex-end;
+    align-self: center;
+}
