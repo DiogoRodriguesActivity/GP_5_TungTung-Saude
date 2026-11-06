@@ -2,7 +2,7 @@
 >Pastas
 ```
 Diagrama de Classes
-├─ V1 (Sprint 1) -colocar Data
+├─ V1 (Sprint 1) -08/10/2026
 ├─ V2 (Sprint 2) -05/11/2026
 
 ```
